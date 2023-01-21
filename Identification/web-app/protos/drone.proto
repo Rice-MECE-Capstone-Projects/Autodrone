@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package autodrone;
+
+// The drone service definition.
+// Modified from https://github.com/grpc/grpc-web/blob/master/net/grpc/gateway/examples/helloworld/helloworld.proto
+service Drone {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+  rpc GetCamera (CameraRequest) returns (stream CameraReply) {}
+  rpc GetBox (Empty) returns (CameraReply) {}
+  rpc GetImageSize (Empty) returns (ImageSize) {}
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}
+
+message CameraRequest {
+  // request image?
+  bool image = 1;
+}
+
+message CameraReply {
+  message BoundingBox {
+    int32 left = 1;
+    int32 top = 2;
+    int32 width = 3;
+    int32 height = 4;
+    float confidence = 5;
+    int32 class = 6;
+    float depth = 7;
+  }
+  bytes image = 1;
+  bytes depth = 2;
+  repeated BoundingBox box = 3;
+}
+
+message ImageSize {
+  int32 width = 1;
+  int32 height = 2;
+}
+
+// import "google/protobuf/empty.proto";
+message Empty {}

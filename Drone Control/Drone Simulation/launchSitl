@@ -1,0 +1,37 @@
+#!/bin/bash
+ 
+kill -9 $(ps -eF | grep QG | awk -F ' ' '{print $2}')>/dev/null 2>&1
+kill -9 $(ps -eF | grep ardu | awk -F ' ' '{print $2}')>/dev/null 2>&1
+kill -9 $(ps -eF | grep mav | awk -F ' ' '{print $2}')>/dev/null 2>&1
+kill -9 $(ps -eF | grep apm | awk -F ' ' '{print $2}')>/dev/null 2>&1
+ 
+ 
+#########
+ 
+## Launch a Sitl drone
+/home/andy/courseRoot/apm/ardupilot/build/sitl/bin/arducopter -S -I0 --home 44.501293,-88.062176,177,180 --model "+" --speedup 1 --defaults $apm/ardupilot/Tools/autotest/default_params/copter.parm&
+ 
+sleep 5
+ 
+## Launch QGC
+/usr/local/bin/QGC.AppImage 2>/dev/null&
+ 
+sleep 5
+ 
+## Start MAVProxy
+screen -dm mavproxy.py --master=tcp:127.0.0.1:5760 --out=127.0.0.1:14550 --out=127.0.0.1:5762
+ 
+##Launch the dronekit-python script
+/usr/bin/python "$1" --connect 127.0.0.1:5762
+ 
+function finish {
+    kill -9 $(ps -eF | grep QG | awk -F ' ' '{print $2}')>/dev/null 2>&1
+    kill -9 $(ps -eF | grep ardu | awk -F ' ' '{print $2}')>/dev/null 2>&1
+    kill -9 $(ps -eF | grep mav | awk -F ' ' '{print $2}')>/dev/null 2>&1
+    kill -9 $(ps -eF | grep apm | awk -F ' ' '{print $2}')>/dev/null 2>&1
+}
+ 
+trap finish EXIT
+------------------------------save and go
+chmod +x launchSitl
+sudo cp launchSitl /usr/local/bin/launchSitl

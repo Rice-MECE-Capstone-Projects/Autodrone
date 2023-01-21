@@ -1,0 +1,25 @@
+camera:
+  device: /dev/video0
+  width: 1280
+  height: 720
+  fps: 10
+detector:
+  model_path: ./tools/yolov5n.engine
+  input_layer: images
+  output_layer: output0
+  confidence_threshold: 0.6
+  iou_threshold: 0.45
+  size: 640
+depth:
+  model_path: ./tools/midas_v21_small.engine
+  input_layer: 0
+  output_layer: 797
+  size: 256
+  depth_k: 1
+  depth_b: 0
+  quality: 80
+server:
+  address: 0.0.0.0:9090
+  key_path: ./tools/cert/localhost.key
+  cert_path: ./tools/cert/localhost.crt
+  password: f2b94662c69f9440090c9d79aa12f0f10a98b269257c2f386725936cbaa8c60d

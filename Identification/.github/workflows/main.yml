@@ -1,0 +1,55 @@
+name: Build and deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'web-app/**'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'latest'
+
+      - name: Prepare
+        run: |
+          cd web-app
+          npm ci
+          npm install -g @angular/cli
+          ./tools/install_protoc.sh
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      - name: Build
+        run: |
+          cd web-app
+          npm run proto-linux
+          ng build --base-href "/drone/"
+          cp dist/web-app/index.html dist/web-app/404.html
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          external_repository: ${{ github.repository_owner }}/${{ github.repository_owner }}.github.io
+          publish_dir: web-app/dist/web-app
+          destination_dir: drone
+          enable_jekyll: true
