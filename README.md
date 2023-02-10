@@ -1,5 +1,4 @@
-<h1 align="center">
-<b>MECE Fall 2023 Capstone project - Autodrone | Rice University</b>
+# MECE Fall 2023 Capstone project - Autodrone | Rice University
 
 ![Autonomous Drone in Artificial Pollination](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/Autonomous%20Drone%20in%20Artificial%20Pollination.png)
 
@@ -125,6 +124,52 @@ jtop
 
 #### 6. Install OpenCV:
 Installing OpenCV on the Jetson Nano can be a bit more complicated, but frankly, [JetsonHacks.com](https://jetsonhacks.com/) has a great guide, or see the tutorial from [Q-engineering](https://qengineering.eu/install-opencv-4.5-on-jetson-nano.html).
+
+#### 7. Install PyTorch:
+
+Since JetPack 4.6 has Python 3.6, you cannot install PyTorch 1.11.0 on a Jetson Nano.
+
+Install **torch-1.9.0**:
+```
+# install the dependencies (if not already onboard)
+sudo apt-get install python3-pip libjpeg-dev libopenblas-dev libopenmpi-dev libomp-dev
+sudo -H pip3 install future
+sudo pip3 install -U --user wheel mock pillow
+sudo -H pip3 install testresources
+
+# above 58.3.0 you get version issues
+sudo -H pip3 install setuptools==58.3.0
+sudo -H pip3 install Cython
+
+# install gdown to download from Google drive
+sudo -H pip3 install gdown
+
+# download the wheel
+gdown https://drive.google.com/uc?id=1wzIDZEJ9oo62_H2oL7fYTp5_-NffCXzt
+
+# install PyTorch 1.9.0
+sudo -H pip3 install torch-1.9.0a0+gitd69c22d-cp36-cp36m-linux_aarch64.whl
+
+# clean up
+rm torch-1.9.0a0+gitd69c22d-cp36-cp36m-linux_aarch64.whl
+```
+
+Install **torchvision-0.10.0**:
+```
+# Used with PyTorch 1.9.0
+# the dependencies
+sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev
+sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev
+
+# download TorchVision 0.10.0
+gdown https://drive.google.com/uc?id=1Q2NKBs2mqkk5puFmOX_pF40yp7t-eZ32
+
+# install TorchVision 0.10.0
+sudo -H pip3 install torchvision-0.10.0a0+300a8a4-cp36-cp36m-linux_aarch64.whl
+
+# clean up
+rm torchvision-0.10.0a0+300a8a4-cp36-cp36m-linux_aarch64.whl
+```
 
 -----------------------------------------------------------------------------------------------
 ## :helicopter:Hardware/Firmware (Drone kit)
