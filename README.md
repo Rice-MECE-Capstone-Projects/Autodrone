@@ -1,7 +1,8 @@
 <h1 align="center">
 <b>MECE Fall 2023 Capstone project - Autodrone | Rice University</b>
 
-![Autonomous Drone in Artificial Pollination](https://content.instructables.com/FEA/JK3H/IPMVDHPZ/FEAJK3HIPMVDHPZ.jpg?auto=webp&frame=1&width=320&md=dd1218dd57db3d71e93fd6422426e29e)
+![Autonomous Drone in Artificial Pollination](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/Autonomous%20Drone%20in%20Artificial%20Pollination.png)
+
 -----------------------------------------------------------------------------------------------
 
 ## :computer:Hardware (Embedded systems)
@@ -126,8 +127,16 @@ jtop
 Installing OpenCV on the Jetson Nano can be a bit more complicated, but frankly, [JetsonHacks.com](https://jetsonhacks.com/) has a great guide, or see the tutorial from [Q-engineering](https://qengineering.eu/install-opencv-4.5-on-jetson-nano.html).
 
 -----------------------------------------------------------------------------------------------
-## :helicopter:Hardware (Drone kit)
+## :helicopter:Hardware/Firmware (Drone kit)
 ### Getting start with Drone kit:
+We using [QWinOut 4-Aixs RC Drone](https://www.amazon.com/dp/B082PN8C98?ref_=cm_sw_r_cp_ud_dp_FE0D8ZMAWQRE5JXRX8X8) for this project, and the controller is based on [Ardupilot](https://ardupilot.org/dev/docs/learning-ardupilot-introduction.html). 
+
+![QWinOut 4-Aixs RC Dron](https://m.media-amazon.com/images/I/61ZRX0IbxFL._AC_SL1000_.jpg)
+
+Download [Mission Planner](https://ardupilot.org/planner/docs/mission-planner-installation.html) to connect to your [Flight Controller](https://a.co/d/29JsbCW) or [Pixhawk PX4 Flight Controller](https://a.co/d/iWNnGU8), then we need to install [MAVProxy](https://pypi.org/project/MAVProxy/) and [DroneKit-Python](https://github.com/dronekit/dronekit-python/) on Jetson Nano, **MAVProxy** is a powerful command-line based “developer” ground station software, and **DroneKit-Python** allows you to control ArduPilot using the Python.
+
+![APM2.8 Flight Controller](https://i.ebayimg.com/images/g/-5EAAOSwpOxhHMsS/s-l500.jpg)
+
 -----------------------------------------------------------------------------------------------
 ## :sunflower:Deep Learning (YOLOv5)
 
