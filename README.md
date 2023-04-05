@@ -202,7 +202,42 @@ We will using [QWinOut J630 4-Aixs RC Drone](https://www.amazon.com/dp/B082PN8C9
 Download [Mission Planner](https://ardupilot.org/planner/docs/mission-planner-installation.html) to connect to your [APM2.8 Flight Controller](https://a.co/d/29JsbCW), [Cube Black Flight Controller](https://docs.px4.io/v1.11/en/flight_controller/pixhawk-2.html) or [Pixhawk PX4 Flight Controller](https://a.co/d/iWNnGU8), then we need to install [MAVProxy](https://pypi.org/project/MAVProxy/) and [DroneKit-Python](https://github.com/dronekit/dronekit-python/) on Jetson Nano, **MAVProxy** is a powerful command-line based “developer” ground station software, and **DroneKit-Python** allows you to simply control flight controller using the Python scripts.
 
 -----------------------------------------------------------------------------------------------
-## :sunflower:Deep Learning (YOLOv5)
+## :sunflower:Deep Learning (YOLOv5 + MiDaS)
+
+This section will implemented using PyTorch and uses YOLOv5 and MiDaS models for object detection and depth estimation respectively.
+
+### Requirements
+
+- Python 3.x
+- PyTorch
+- OpenCV
+
+### Installation
+
+- Clone this repository: ```git clone https://github.com/ultralytics/yolov5```
+- Install the required packages: ```pip install -r requirements.txt  # install```
+
+### Usage
+
+- Connect your USB camera to the computer
+- Determine the camera port number and modify it in the 11th line of the code, if necessary: cam_port = 0
+- Run the script in the terminal: 
+
+```
+python Identification/object_detection+depth_estimation.py
+```
+
+- The script will open the camera and start detecting objects and estimating their depths in real-time.
+
+### Result
+
+<img src="https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/YOLOv5_test.gif" width="500" height="300" />
+
+### Keybindings
+
+Press 'c' to exit the script and close the camera window.
+
+
 
 -----------------------------------------------------------------------------------------------
 ## :rocket:Firmware (Drone control)
