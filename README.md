@@ -172,11 +172,13 @@ rm torchvision-0.10.0a0+300a8a4-cp36-cp36m-linux_aarch64.whl
 ```
 
 -----------------------------------------------------------------------------------------------
-## :helicopter:Hardware/Firmware (Drone kit)
-### Getting start with Drone kit:
+## :helicopter:Hardware (Drone)
+### Getting start with 6-Aixs RC Drone:
+
+### Getting start with 4-Aixs RC Drone:
 We using [QWinOut 4-Aixs RC Drone](https://www.amazon.com/dp/B082PN8C98?ref_=cm_sw_r_cp_ud_dp_FE0D8ZMAWQRE5JXRX8X8) for this project, and the controller is based on [Ardupilot](https://ardupilot.org/dev/docs/learning-ardupilot-introduction.html). 
 
-![QWinOut 4-Aixs RC Dron](https://m.media-amazon.com/images/I/61ZRX0IbxFL._AC_SL1000_.jpg)
+![QWinOut 4-Aixs RC Drone](https://m.media-amazon.com/images/I/61ZRX0IbxFL._AC_SL1000_.jpg)
 
 Download [Mission Planner](https://ardupilot.org/planner/docs/mission-planner-installation.html) to connect to your [Flight Controller](https://a.co/d/29JsbCW) or [Pixhawk PX4 Flight Controller](https://a.co/d/iWNnGU8), then we need to install [MAVProxy](https://pypi.org/project/MAVProxy/) and [DroneKit-Python](https://github.com/dronekit/dronekit-python/) on Jetson Nano, **MAVProxy** is a powerful command-line based “developer” ground station software, and **DroneKit-Python** allows you to control ArduPilot using the Python.
 
@@ -186,10 +188,47 @@ Download [Mission Planner](https://ardupilot.org/planner/docs/mission-planner-in
 ## :sunflower:Deep Learning (YOLOv5)
 
 -----------------------------------------------------------------------------------------------
-## :rocket:Software (Drone control)
+## :rocket:Firmware (Drone control)
+
+This section contains Python scripts to control a drone using DroneKit and pymavlink libraries.
+
+### Prerequisites
+
+- A drone compatible with DroneKit and pymavlink libraries
+- A flight controller connected to an embedded device
+- Python 3.x installed on the device
+- DroneKit and pymavlink libraries installed on the device
+
+### Usage
+
+#### Hover test
+
+To test hovering in the air, run ```sudo python3 Drone Control/Hover_test2_successfully.py``` in a terminal window. This script will let the drone hover in the air about 1 foot for 1 second, then safely land on the ground.
+
+Before running the script, make sure the flight controller is connected to the embedded device and check the port name. Modify the 6th line ```vehicle = connect('/dev/ttyACM0',wait_ready=True, baud=57600)``` accordingly, where ```/dev/ttyACM0``` is your port name.
+
+To interrupt the script and shutdown the drone, use ```ctrl + c```.
+
+#### Movement test
+
+To test movement, run ```sudo python3 Drone Control/Movement_test3_successfully.py``` in a terminal window. This script will let the drone hover in the air about 2 feet for 1 second, move forward with 1 ms about 1 foot, hover in the air about 1 second, and finally safely land on the ground.
+
+Before running the script, check the connection and modify the port name if necessary.
+
+To interrupt the script and shutdown the drone, use ```ctrl + c```.
+
+#### Rotation test
+
+To test rotation, run ```sudo python3 Drone Control/Rotation_test2_successfully.py``` in a terminal window. This script will let the drone hover in the air about 1 foot for 1 second, rotate clockwise about 90 degrees, hover in the air about 1 second, and finally safely land on the ground.
+
+Before running the script, check the connection and modify the port name if necessary.
+
+To interrupt the script and shutdown the drone, use ```ctrl + c```.
 
 -----------------------------------------------------------------------------------------------
-## :flying_saucer:Software (Simulation in the loop (SIL)
+## :flying_saucer:Software (Simulation in the loop (SITL)
 
 -----------------------------------------------------------------------------------------------
 ## :iphone:Software (UI)
+
+To be continue...
