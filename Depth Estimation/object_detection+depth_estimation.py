@@ -43,6 +43,7 @@ while True:
         x1, y1, x2, y2, conf, cls = det
 
         median_depth = np.median(depth[int(y1):int(y2), int(x1):int(x2)])
+        median_depth = -0.196 * median_depth + 5.742
         
         cv2.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), (0, 0, 255), 2)
         cv2.putText(frame, str(round(median_depth, 2)), (int(x1), int(y1-10)), cv2.FONT_HERSHEY_SCRIPT_SIMPLEX, 0.5, (0, 0, 255), 2)
