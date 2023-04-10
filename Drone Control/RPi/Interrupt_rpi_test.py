@@ -27,8 +27,13 @@ def arm_and_disarm():
 
     # Confirm vehicle armed before attempting to take off
     while not vehicle.armed:
+        time.sleep(1)
         print (" Waiting for arming...")
         time.sleep(1)
+
+    print (" Waiting 180 sec")
+    time.sleep(180)
+    
         
     while vehicle.armed:
         print(" Waiting for disarming...")
