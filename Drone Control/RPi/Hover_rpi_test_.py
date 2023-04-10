@@ -3,7 +3,7 @@ from dronekit import connect, VehicleMode,LocationGlobal,LocationGlobalRelative
 #############################
 
 ############DRONEKIT#################
-vehicle = connect('/dev/ttyACM0',wait_ready=True, baud=57600)
+vehicle = connect('/dev/ttyAMA0',wait_ready=True, baud=57600)
 
 #Select /dev/ttyAMA0 for UART. /dev/ttyACM0 for USB
 
