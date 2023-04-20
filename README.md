@@ -266,6 +266,10 @@ Before running the script, make sure the flight controller is connected to the e
 
 To interrupt the script and shutdown the drone, use ```ctrl + c```.
 
+#### Hover Demo:
+
+<img src="https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/Hover_test.gif" width="500" height="300" />
+
 #### Movement test
 
 To test movement, run ```sudo python3 Drone Control/Movement_test3_successfully.py``` in a terminal window. This script will let the drone hover in the air about 2 feet for 1 second, move forward with 1 ms about 1 foot, hover in the air about 1 second, and finally safely land on the ground.
@@ -273,6 +277,10 @@ To test movement, run ```sudo python3 Drone Control/Movement_test3_successfully.
 Before running the script, check the connection and modify the port name if necessary.
 
 To interrupt the script and shutdown the drone, use ```ctrl + c```.
+
+#### Movement Demo:
+
+<img src="https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/Movement_test.gif" width="300" height="500" />
 
 #### Rotation test
 
@@ -282,6 +290,10 @@ Before running the script, check the connection and modify the port name if nece
 
 To interrupt the script and shutdown the drone, use ```ctrl + c```.
 
+#### Rotation Demo:
+
+<img src="https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/Rotation_test.gif" width="300" height="500" />
+
 #### QR code tracking test
 
 To test QR code tracking, run ```sudo python3 Drone Control/Hover_and_qr_code_tracking_successfully.py``` in a terminal window. This script will let the drone hover in the air about 1 foot, then open camera and start to detect QR code, if QR code on the right side of the drone, drone will rotate clockwise until QR code in the center, this script won't automatically land on the ground, you need to interrupt it using ```ctrl + c```.
@@ -289,6 +301,10 @@ To test QR code tracking, run ```sudo python3 Drone Control/Hover_and_qr_code_tr
 Before running the script, check the connection and modify the port name if necessary.
 
 To interrupt the script and shutdown the drone, use ```ctrl + c```.
+
+#### QR code tracking Demo:
+
+<img src="https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/QR_code_tracking_test.gif" width="500" height="300" />
 
 -----------------------------------------------------------------------------------------------
 ## :flying_saucer:Software (Simulation in the loop (SITL)
