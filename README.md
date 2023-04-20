@@ -291,7 +291,13 @@ To interrupt the script and shutdown the drone, use ```ctrl + c```.
 -----------------------------------------------------------------------------------------------
 ## :iphone:GUI Interface
 
-We use SIK radio connect Cube Black flight controller, and send flight controller's status to SIK radio receiver, receiver connect with Laptop, then we can check the real-time status using Mission Planner, as shown in following figure.
+We use **SIK radio** connect Cube Black flight controller, and send flight controller's status to **SIK radio receiver**, receiver connect with Laptop, then we can check the real-time status using Mission Planner, as shown in following figure.
+
+### SIK Radio Telemetry Kit
+
+<img src="https://m.media-amazon.com/images/I/51pdefTAnZL._AC_SX679_.jpg" width="300" height="200" />
+
+### GUI Mission Planner Interface
 
 <img src="https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/Mission_Planner_GUI.png" width="500" height="300" />
 
