@@ -293,6 +293,11 @@ To interrupt the script and shutdown the drone, use ```ctrl + c```.
 -----------------------------------------------------------------------------------------------
 ## :flying_saucer:Software (Simulation in the loop (SITL)
 
+Unable to complete this semester, we encountered problems with the Window OS version and incompatibility between AirSim and Unreal Engine versions.
+
+Follow this tutorial:
+https://ardupilot.org/dev/docs/sitl-with-airsim.html
+
 -----------------------------------------------------------------------------------------------
 ## :iphone:GUI Interface
 
