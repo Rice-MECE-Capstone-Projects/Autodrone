@@ -289,6 +289,12 @@ To interrupt the script and shutdown the drone, use ```ctrl + c```.
 ## :flying_saucer:Software (Simulation in the loop (SITL)
 
 -----------------------------------------------------------------------------------------------
-## :iphone:Software (UI)
+## :iphone:GUI Interface
 
-To be continue...
+We use SIK radio connect Cube Black flight controller, and send flight controller's status to SIK radio receiver, receiver connect with Laptop, then we can check the real-time status using Mission Planner, as shown in following figure.
+
+<img src="https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/Mission_Planner_GUI.png" width="500" height="300" />
+
+### GUI Result
+
+<img src="https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/Drone_Hover_and_GUI_test.gif" width="500" height="300" />
