@@ -277,6 +277,14 @@ Before running the script, check the connection and modify the port name if nece
 
 To interrupt the script and shutdown the drone, use ```ctrl + c```.
 
+#### QR code tracking test
+
+To test QR code tracking, run ```sudo python3 Drone Control/Hover_and_qr_code_tracking_successfully.py``` in a terminal window. This script will let the drone hover in the air about 1 foot, then open camera and start to detect QR code, if QR code on the right side of the drone, drone will rotate clockwise until QR code in the center, this script won't automatically land on the ground, you need to interrupt it using ```ctrl + c```.
+
+Before running the script, check the connection and modify the port name if necessary.
+
+To interrupt the script and shutdown the drone, use ```ctrl + c```.
+
 -----------------------------------------------------------------------------------------------
 ## :flying_saucer:Software (Simulation in the loop (SITL)
 
