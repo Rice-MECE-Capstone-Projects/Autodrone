@@ -298,3 +298,9 @@ We use SIK radio connect Cube Black flight controller, and send flight controlle
 ### GUI Result
 
 <img src="https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/Drone_Hover_and_GUI_test.gif" width="500" height="300" />
+
+-----------------------------------------------------------------------------------------------
+## License
+This project is licensed under Electrical and Computer Engineering Department at Rice University
+
+<img src="https://riceconnect.rice.edu/image/engineering/ece/SOE-ECE-Rice-logo-stacked.jpg" width="500" height="140" />
