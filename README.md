@@ -1,7 +1,12 @@
-# MECE Fall 2023 Capstone project - Autodrone | Rice University
+# MECE Spring 2023 Capstone project - Autodrone | Rice University
 
 
 <img src="https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/Autonomous%20Drone%20in%20Artificial%20Pollination.png" width="800" height="400" />
+
+-----------------------------------------------------------------------------------------------
+## :clipboard: Overall System Design
+
+<img src="https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/Overall_System_Design.png" width="800" height="450" />
 
 -----------------------------------------------------------------------------------------------
 
@@ -261,6 +266,10 @@ Before running the script, make sure the flight controller is connected to the e
 
 To interrupt the script and shutdown the drone, use ```ctrl + c```.
 
+#### Hover Demo:
+
+<img src="https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/Hover_test.gif" width="500" height="300" />
+
 #### Movement test
 
 To test movement, run ```sudo python3 Drone Control/Movement_test3_successfully.py``` in a terminal window. This script will let the drone hover in the air about 2 feet for 1 second, move forward with 1 ms about 1 foot, hover in the air about 1 second, and finally safely land on the ground.
@@ -268,6 +277,10 @@ To test movement, run ```sudo python3 Drone Control/Movement_test3_successfully.
 Before running the script, check the connection and modify the port name if necessary.
 
 To interrupt the script and shutdown the drone, use ```ctrl + c```.
+
+#### Movement Demo:
+
+<img src="https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/Movement_test.gif" width="300" height="500" />
 
 #### Rotation test
 
@@ -277,10 +290,49 @@ Before running the script, check the connection and modify the port name if nece
 
 To interrupt the script and shutdown the drone, use ```ctrl + c```.
 
+#### Rotation Demo:
+
+<img src="https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/Rotation_test.gif" width="300" height="500" />
+
+#### QR code tracking test
+
+To test QR code tracking, run ```sudo python3 Drone Control/Hover_and_qr_code_tracking_successfully.py``` in a terminal window. This script will let the drone hover in the air about 1 foot, then open camera and start to detect QR code, if QR code on the right side of the drone, drone will rotate clockwise until QR code in the center, this script won't automatically land on the ground, you need to interrupt it using ```ctrl + c```.
+
+Before running the script, check the connection and modify the port name if necessary.
+
+To interrupt the script and shutdown the drone, use ```ctrl + c```.
+
+#### QR code tracking Demo:
+
+<img src="https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/QR_code_tracking_test.gif" width="500" height="300" />
+
 -----------------------------------------------------------------------------------------------
 ## :flying_saucer:Software (Simulation in the loop (SITL)
 
------------------------------------------------------------------------------------------------
-## :iphone:Software (UI)
+Unable to complete this semester, we encountered problems with the Window OS version and incompatibility between AirSim and Unreal Engine versions.
 
-To be continue...
+Follow this tutorial:
+https://ardupilot.org/dev/docs/sitl-with-airsim.html
+
+-----------------------------------------------------------------------------------------------
+## :iphone:GUI Interface
+
+We use **SIK radio** connect Cube Black flight controller, and send flight controller's status to **SIK radio receiver**, receiver connect with Laptop, then we can check the real-time status using Mission Planner, as shown in following figure.
+
+### SIK Radio Telemetry Kit
+
+<img src="https://m.media-amazon.com/images/I/51pdefTAnZL._AC_SX679_.jpg" width="300" height="200" />
+
+### GUI Mission Planner Interface
+
+<img src="https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/Mission_Planner_GUI.png" width="500" height="300" />
+
+### GUI Result
+
+<img src="https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/Drone_Hover_and_GUI_test.gif" width="500" height="300" />
+
+-----------------------------------------------------------------------------------------------
+## License
+This project is licensed under Electrical and Computer Engineering Department at Rice University
+
+<img src="https://riceconnect.rice.edu/image/engineering/ece/SOE-ECE-Rice-logo-stacked.jpg" width="500" height="140" />
