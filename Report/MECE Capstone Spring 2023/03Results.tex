@@ -176,6 +176,23 @@ X Y
         \label{tab3}
     \end{center}
 \end{table}
+\pgfplotstableread{
+x y
+1 30.62
+2 32.89
+2 32.64
+3 29.41
+3.5 29.44
+}\datatableA
+\pgfplotstableread{
+x y
+1 28.19
+1 27.15
+2 32.16
+2 27.78
+3 28.64
+3.5 26.56
+}\datatableB
 
 \begin{figure}[H]
     \centering
@@ -196,25 +213,12 @@ X Y
                 % ytick={20, 23, 26, 29, 32, 35}
             ]
                 \addplot[blue,only marks, mark=square*]
-                    table[x=x, y=y, col sep=space] {
-                    x y
-                    1 30.62
-                    2 32.89
-                    2 32.64
-                    3 29.41
-                    3.5 29.44
-                };
+                    table[x=x, y=y, col sep=space] 
+                    {\datatableA};
                 
                 \addplot[red,only marks, mark=*]
-                    table[x=x, y=y, col sep=space] {
-                    x y
-                    1 28.19
-                    1 27.15
-                    2 32.16
-                    2 27.78
-                    3 28.64
-                    3.5 26.56
-                };
+                    table[x=x, y=y, col sep=space]
+                    {\datatableB};
                 
                 \addlegendentry{Orientation 1}
                 \addlegendentry{Orientation 2}
