@@ -23,11 +23,14 @@ def raw_stream(video_path):
     cap.release()
     cv2.destroyAllWindows()
 
+
 def process_stream(model, video_path):
     results = model.predict(source=video_path, show=True)
 
+
+
 if __name__ == '__main__':
-    model = YOLO('../../YOLO_Models')
+    model = YOLO('../../YOLO_Models/yolov8/yolov8n.pt')
     # model = YOLO('../mask_detection/weights/best_weight.pt')
     video_path = "http://192.168.4.1:8081/0/stream"
     p1 = multiprocessing.Process(target=raw_stream, args=(video_path,))

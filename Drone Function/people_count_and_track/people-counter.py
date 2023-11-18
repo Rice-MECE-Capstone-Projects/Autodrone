@@ -5,7 +5,7 @@ import cvzone
 import math
 from sort import *
 
-#cap = cv2.VideoCapture("../Videos/pedestrian3.mp4")  # For Video
+# cap = cv2.VideoCapture("../Videos/pedestrian3.mp4")  # For Video
 cap = cv2.VideoCapture(0)  # For Webcam
 # cap.set(3, 1024) #width
 # cap.set(4, 720) #height
@@ -33,11 +33,11 @@ totalCount = []
 
 while True:
     success, img = cap.read()
-    #imgRegion = cv2.bitwise_and(img, mask)
+    # imgRegion = cv2.bitwise_and(img, mask)
     imgRegion = img
 
-    #imgGraphics = cv2.imread("graphics.png", cv2.IMREAD_UNCHANGED)
-    #img = cvzone.overlayPNG(img, imgGraphics, (0, 0))
+    # imgGraphics = cv2.imread("graphics.png", cv2.IMREAD_UNCHANGED)
+    # img = cvzone.overlayPNG(img, imgGraphics, (0, 0))
     results = model(imgRegion, stream=True)
 
     detections = np.empty((0, 5))
