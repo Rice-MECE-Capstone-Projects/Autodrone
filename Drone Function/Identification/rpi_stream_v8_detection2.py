@@ -27,8 +27,8 @@ def process_stream(model, video_path):
     results = model.predict(source=video_path, show=True)
 
 if __name__ == '__main__':
-    # model = YOLO('../yolov8n.pt')
-    model = YOLO('../../mask detection/weights/best.pt')
+    model = YOLO('../../YOLO_Models')
+    # model = YOLO('../mask_detection/weights/best_weight.pt')
     video_path = "http://192.168.4.1:8081/0/stream"
     p1 = multiprocessing.Process(target=raw_stream, args=(video_path,))
     p2 = multiprocessing.Process(target=process_stream, args=(model, video_path)) # starting process 1
