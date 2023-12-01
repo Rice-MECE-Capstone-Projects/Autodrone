@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- <include file="$(find drone_control)/launch/apm.launch"/> -->
+  <!-- drone_control/scripts/startsitl.sh -->
+  <include file="$(find drone_control)/launch/gazebo_env.launch"/>
+  <node pkg="drone_control" type="image_sub" name="image_sub" output="screen" args="-d $(find drone_control)/src/image_sub"/>
+  <node pkg="drone_control" type="person_tracking" name="person_tracking" output="screen" args="-d $(find drone_control)/src/person_tracking"/>
+</launch>

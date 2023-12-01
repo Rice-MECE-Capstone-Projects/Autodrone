@@ -96,7 +96,7 @@
       <world_size>100</world_size>
       <tile_size>640</tile_size>
       <map_type>satellite</map_type>
-      <api_key>api_key</api_key>
+      <api_key>your_google_map_api</api_key>
       <use_cache>false</use_cache>
     </plugin>
 

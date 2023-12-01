@@ -4,6 +4,11 @@ project(drone_control)
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
 
+
+
+
+
+
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
@@ -15,6 +20,8 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   sensor_msgs
   std_msgs
+  cv_bridge
+  image_transport
 )
 
 ## System dependencies are found with CMake's conventions
@@ -138,8 +145,7 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/drone_control_node.cpp)
-add_executable(square_test src/square_test.cpp)
-target_link_libraries(square_test ${catkin_LIBRARIES})
+
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -201,7 +207,9 @@ target_link_libraries(square_test ${catkin_LIBRARIES})
 #############
 ## Testing ##
 #############
-
+catkin_install_python(PROGRAMS src/lidar_test_python.py src/lidar_process.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 ## Add gtest based cpp test target and link libraries
 # catkin_add_gtest(${PROJECT_NAME}-test test/test_drone_control.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
@@ -210,3 +218,31 @@ target_link_libraries(square_test ${catkin_LIBRARIES})
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+set(OpenCV_DIR /usr/local/lib/cmake/opencv4/)
+find_package(OpenCV 4.8 REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+add_executable(image_sub src/image_sub.cpp src/yolo.cpp)
+target_link_libraries(image_sub ${catkin_LIBRARIES})
+target_link_libraries(image_sub ${OpenCV_LIBRARIES})
+
+add_executable(person_tracking src/person_tracking.cpp)
+target_link_libraries(person_tracking ${catkin_LIBRARIES})
+
+add_executable(square_test src/square_test.cpp)
+target_link_libraries(square_test ${catkin_LIBRARIES})
+
+add_executable(motion_test src/motion_test.cpp)
+target_link_libraries(motion_test ${catkin_LIBRARIES})
+
+
+add_executable(wall_person_test src/wall_person_test.cpp)
+target_link_libraries(wall_person_test ${catkin_LIBRARIES})
+
+add_executable(waypoint src/waypoint.cpp)
+target_link_libraries(waypoint ${catkin_LIBRARIES})
+
+message(STATUS "OpenCV library status:")
+message(STATUS "    version: ${OpenCV_VERSION}")
+message(STATUS "    libraries: ${OpenCV_LIBRARIES}")
+message(STATUS "    include path: ${OpenCV_INCLUDE_DIRS}")

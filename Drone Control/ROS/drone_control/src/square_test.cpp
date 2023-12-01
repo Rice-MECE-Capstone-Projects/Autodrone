@@ -20,39 +20,79 @@ int main(int argc, char** argv)
 	initialize_local_frame();
 
 	//request takeoff
-	takeoff(20);
+	takeoff(8);
 
 	//specify some waypoints 
 	std::vector<gnc_api_waypoint> waypointList;
 	gnc_api_waypoint nextWayPoint;
 	nextWayPoint.x = 0;
 	nextWayPoint.y = 0;
-	nextWayPoint.z = 20;
+	nextWayPoint.z = 8;
 	nextWayPoint.psi = 0;
 	waypointList.push_back(nextWayPoint);
-	nextWayPoint.x = 20;
-	nextWayPoint.y = 0;
-	nextWayPoint.z = 20;
-	nextWayPoint.psi = -90;
+	nextWayPoint.x = -5;
+	nextWayPoint.y = 2.5;
+	nextWayPoint.z = 8;
+	nextWayPoint.psi = 0;
 	waypointList.push_back(nextWayPoint);
-	nextWayPoint.x = 20;
+	nextWayPoint.x = -5;
+	nextWayPoint.y = 10;
+	nextWayPoint.z = 8;
+	nextWayPoint.psi = 45;
+	waypointList.push_back(nextWayPoint);
+	nextWayPoint.x = -10;
 	nextWayPoint.y = 20;
-	nextWayPoint.z = 20;
+	nextWayPoint.z = 10;
+	nextWayPoint.psi = 135;
+	waypointList.push_back(nextWayPoint);
+	nextWayPoint.x = -5;
+	nextWayPoint.y = 20;
+	nextWayPoint.z = 13;
+	nextWayPoint.psi = 225;
+	waypointList.push_back(nextWayPoint);
+	nextWayPoint.x = -5;
+	nextWayPoint.y = 25;
+	nextWayPoint.z = 9;
+	nextWayPoint.psi = 315;
+	waypointList.push_back(nextWayPoint);
+	nextWayPoint.x = -10;
+	nextWayPoint.y = 30;
+	nextWayPoint.z = 7;
+	nextWayPoint.psi = 315;
+	waypointList.push_back(nextWayPoint);
+	nextWayPoint.x = -5;
+	nextWayPoint.y = 30;
+	nextWayPoint.z = 10;
+	nextWayPoint.psi = 315;
+	waypointList.push_back(nextWayPoint);
+	nextWayPoint.x = 5;
+	nextWayPoint.y = 25;
+	nextWayPoint.z = 12;
+	nextWayPoint.psi = 315;
+	waypointList.push_back(nextWayPoint);
+	nextWayPoint.x = 10;
+	nextWayPoint.y = 20;
+	nextWayPoint.z = 10;
+	nextWayPoint.psi = 225;
+	waypointList.push_back(nextWayPoint);
+	nextWayPoint.x = 15;
+	nextWayPoint.y = 20;
+	nextWayPoint.z = 8;
+	nextWayPoint.psi = 135;
+	waypointList.push_back(nextWayPoint);
+	nextWayPoint.x = 5;
+	nextWayPoint.y = 10;
+	nextWayPoint.z = 7;
+	nextWayPoint.psi = 45;
+	waypointList.push_back(nextWayPoint);
+	nextWayPoint.x = 5;
+	nextWayPoint.y = 2.5;
+	nextWayPoint.z = 6;
 	nextWayPoint.psi = 0;
 	waypointList.push_back(nextWayPoint);
 	nextWayPoint.x = 0;
-	nextWayPoint.y = 20;
-	nextWayPoint.z = 20;
-	nextWayPoint.psi = 90;
-	waypointList.push_back(nextWayPoint);
-	nextWayPoint.x = 0;
 	nextWayPoint.y = 0;
-	nextWayPoint.z = 20;
-	nextWayPoint.psi = 180;
-	waypointList.push_back(nextWayPoint);
-	nextWayPoint.x = 0;
-	nextWayPoint.y = 0;
-	nextWayPoint.z = 20;
+	nextWayPoint.z = 5;
 	nextWayPoint.psi = 0;
 	waypointList.push_back(nextWayPoint);
 
@@ -69,7 +109,8 @@ int main(int argc, char** argv)
 			if (counter < waypointList.size())
 			{
 				set_destination(waypointList[counter].x,waypointList[counter].y,waypointList[counter].z, waypointList[counter].psi);
-				counter++;	
+				counter++;
+				sleep(0.5);
 			}else{
 				//land after all waypoints are reached
 				land();
