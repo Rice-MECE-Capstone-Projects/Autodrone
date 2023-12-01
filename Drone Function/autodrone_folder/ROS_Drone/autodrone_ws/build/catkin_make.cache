@@ -1,0 +1,2 @@
+beginner_tutorials:camera_test:fcu_connection:fusion_sensor:hls_lfcd_lds_driver:pyzbar:rplidar_ros:usb_cam
+-DCATKIN_DEVEL_PREFIX=/home/autodrone/autodrone_folder/autodrone_ws/devel -DCMAKE_INSTALL_PREFIX=/home/autodrone/autodrone_folder/autodrone_ws/install -G Unix Makefiles

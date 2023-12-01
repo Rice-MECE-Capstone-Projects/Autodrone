@@ -1,0 +1,8 @@
+prefix=/home/autodrone/autodrone_folder/autodrone_ws/devel
+
+Name: usb_cam
+Description: Description of usb_cam
+Version: 0.3.7
+Cflags: -I/home/autodrone/autodrone_folder/autodrone_ws/src/usb_cam/include
+Libs: -L${prefix}/lib -lusb_cam
+Requires: 

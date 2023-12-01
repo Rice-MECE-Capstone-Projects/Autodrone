@@ -1,0 +1,8 @@
+prefix=/home/autodrone/autodrone_folder/autodrone_ws/install
+
+Name: hls_lfcd_lds_driver
+Description: Description of hls_lfcd_lds_driver
+Version: 1.1.2
+Cflags: -I${prefix}/include -I/usr/include
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs sensor_msgs

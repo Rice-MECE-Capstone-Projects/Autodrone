@@ -1,0 +1,8 @@
+prefix=/home/autodrone/autodrone_folder/autodrone_ws/install
+
+Name: fusion_sensor
+Description: Description of fusion_sensor
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/autodrone/autodrone_folder/autodrone_ws/devel/setup.sh

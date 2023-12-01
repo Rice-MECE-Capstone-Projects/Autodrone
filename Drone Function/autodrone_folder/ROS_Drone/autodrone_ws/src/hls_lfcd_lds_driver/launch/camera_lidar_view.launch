@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="hls_lfcd_lds_driver" type="hlds_laser_segment_publisher" name="hlds_laser_segment_publisher" output="screen">
+    <param name="port" value="/dev/ttyUSB0"/>
+    <param name="frame_id" value="laser"/>
+  </node>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find hls_lfcd_lds_driver)/rviz/camera_lidar_view.rviz" />
+  <node pkg="camera_test" type="camera_pub.py" name="camera_pub" output="screen" args="-d $(find camera_test)/src/camera_pub.py"/>
+</launch>
