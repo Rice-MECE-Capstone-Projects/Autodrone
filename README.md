@@ -1,7 +1,7 @@
-# MECE Spring 2023 Capstone project - Autodrone | Rice University
+# MECE Fall 2023 Capstone project - Autodrone | Rice University
 
 
-<img src="https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/Autonomous%20Drone%20in%20Artificial%20Pollination.png" width="800" height="400" />
+<img src="https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/RPi_YOLOv8.png" width="800" height="400" />
 
 -----------------------------------------------------------------------------------------------
 ## :clipboard: Overall System Design
