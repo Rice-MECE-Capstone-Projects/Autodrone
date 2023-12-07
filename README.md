@@ -358,9 +358,40 @@ catkin_make
 ```
 Wait for the make to complete.
 
+Source the workspace. You have to do this everytime you open a new terminal, or add this line to .bashrc file to make it permanently effective.
+```
+source devel/setup.bash
+```
 
+To make sure your workspace is properly overlayed by the setup script, make sure ROS_PACKAGE_PATH environment variable includes the directory you're in.
+```
+echo $ROS_PACKAGE_PATH
+/home/youruser/autodrone_ws/src:/opt/ros/kinetic/share
+```
 
+Before running or launching any files, run:
+```
+roscore
+```
 
+### Bring up camera for QR code tracking
+```
+roscd
+roslaunch camera_test camera_trackqr.launch
+```
+
+### Bring up camera and LiDAR
+Check the port that device connected.
+```
+roscd
+../dev_path.sh
+sudo chmod 666 /dev/<port_name>
+```
+
+Launch the camera-LiDAR fusion
+```
+roslaunch fusion_sensor fusion.launch
+```
 
 -----------------------------------------------------------------------------------------------
 ## License
