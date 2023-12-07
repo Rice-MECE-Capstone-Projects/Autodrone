@@ -333,6 +333,31 @@ We use **SIK radio** connect Cube Black flight controller, and send flight contr
 
 ## :video_camera: ROS (Robot Operating System)
 
+### ROS Neotic installation instruction from offical website
+The link can be found here: 
+https://wiki.ros.org/noetic/Installation/Ubuntu
+
+Follow the steps to compelete the installation.
+Then, source the Installation by:
+'''
+source /opt/ros/noetic/setup.bash
+'''
+
+
+Clone the ROS workspace to local workspace:
+'''
+cd ~
+git clone https://github.com/Rice-MECE-Capstone-Projects/Autodrone.git
+cp -a ~/Autodrone/Drone_Function/autodrone_folder/ROS_Drone/. ~/
+'''
+
+Create and build a ROS workspace with you preferred name:
+'''
+cd ~/autodrone_ws/
+catkin_make
+'''
+Wait for the make to complete.
+
 
 
 
