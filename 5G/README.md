@@ -2,7 +2,17 @@
 ## 5G
 
 ## :clipboard: Overall System Design
+### Test Environment
 
+### Autodrone
+- Jetson Nano
+  - Uses Quectel CM with GobiNet Driver
+  - Power: USB-C (Modem) to USB-A (Nano)
+  - Data: USB-A (Modem) to USB-C (Nano)
+- Linux VM
+  - Uses Quectel CM with QMI WWAN Driver
+  - Power: USB-C (Modem) to AC Adapter
+  - Data: USB-A (Modem) to USB-C (Nano)
 
 
 -----------------------------------------------------------------------------------------------
@@ -59,6 +69,16 @@ AT+CGACT
 AT+CPIN?
 AT+COPS
 AT+5g
+```
+### Check Host Recognizes Modem
+Use either command to look for USB0, USB1, USB2, and USB3 connected
+```
+ls /dev/tty*
+sudo dmesg | grep tty
+```
+### Start Minicom to send AT Commands
+```
+Sudo minicom -D /dev/ttyUSB2
 ```
 ### Configure UE for OpenAir
 ```
