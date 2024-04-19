@@ -8,7 +8,7 @@
 -----------------------------------------------------------------------------------------------
 
 ## :computer:Hardware (Embedded systems)
-### Download Software/Drivers
+### Download Software/Drivers (https://docs.sixfab.com/docs/sixfab-5g-modem-kit-documentation)
 - Quectel CM
 - QMI 
 - Gobi
