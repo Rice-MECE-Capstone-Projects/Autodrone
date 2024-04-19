@@ -49,7 +49,7 @@ sudo ./program_uicc --adm 12345678 --imsi 001010000000001 --isdn 00000001 --acc 
 
 ```
 -----------------------------------------------------------------------------------------------
-## Initial Operations 
+## 📱 Initial Operations 
 ### Basic ATCOM Commands
 ```
 AT+CFUN
