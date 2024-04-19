@@ -48,8 +48,9 @@ To program a SIM card, use a card reader. Below is an example configuration base
 sudo ./program_uicc --adm 12345678 --imsi 001010000000001 --isdn 00000001 --acc 0001 --key fec86ba6eb707ed08905757b1bb44b8f --opc C42449363BBAD02B66D16BC975D77CC1 -spn "OpenAirInterface" --authenticate![image](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/assets/143918914/3e79efae-3978-4fbd-ae9d-5d88c713858e)
 
 ```
-### Initial Operations 
-#### Basic ATCOM Commands
+-----------------------------------------------------------------------------------------------
+## Initial Operations 
+### Basic ATCOM Commands
 ```
 AT+CFUN
 AT+CGDCONT
@@ -58,4 +59,4 @@ AT+CPIN?
 AT+COPS
 AT+5g
 ```
-#### Configure UE for OpenAir
+### Configure UE for OpenAir
