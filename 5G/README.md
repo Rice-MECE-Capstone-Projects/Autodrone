@@ -51,6 +51,7 @@ sudo ./program_uicc --adm 12345678 --imsi 001010000000001 --isdn 00000001 --acc 
 -----------------------------------------------------------------------------------------------
 ## 📱 Initial Operations 
 ### Basic ATCOM Commands
+Please see ATCOM Manual under References folder.
 ```
 AT+CFUN
 AT+CGDCONT
