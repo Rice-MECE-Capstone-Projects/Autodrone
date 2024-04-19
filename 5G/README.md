@@ -60,3 +60,8 @@ AT+COPS
 AT+5g
 ```
 ### Configure UE for OpenAir
+```
+AT+CGDCONT=1,"IP","oai"
+AT+QCFG="usbnet",0
+
+```
