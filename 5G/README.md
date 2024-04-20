@@ -19,7 +19,7 @@
 
 ## :computer:Hardware (Embedded systems)
 ### Download Software/Drivers (see folder) 
-(https://docs.sixfab.com/docs/sixfab-5g-modem-kit-documentation)
+
 - Quectel CM
 - QMI 
 - Gobi
@@ -27,6 +27,7 @@
 - UICC
 
 https://docs.sixfab.com/docs/sixfab-5g-modem-kit-documentation
+
 https://open-cells.com/index.php/uiccsim-programing/
 
 #### Install ATCOM
