@@ -23,7 +23,7 @@ The dataset can be downloaded here.
 
 ### Usage
 To train a YOLOv8n model on the VisDrone dataset for 100 epochs with an image size of 640, you can use the following code snippets. For a comprehensive list of available arguments, refer to the model [Training page](https://docs.ultralytics.com/modes/train/).
-<pre>
+
 ```python
 from ultralytics import YOLO
 
@@ -33,6 +33,5 @@ model = YOLO('yolov8n.pt')  # load a pretrained model (recommended for training)
 # Train the model
 results = model.train(data='VisDrone.yaml', epochs=100, imgsz=640)
 ```
-</pre>
 
 
