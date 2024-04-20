@@ -31,7 +31,7 @@ https://docs.sixfab.com/docs/sixfab-5g-modem-kit-documentation
 https://open-cells.com/index.php/uiccsim-programing/
 
 #### Install ATCOM
-
+https://docs.sixfab.com/page/sending-at-commands
 ```
 sudo apt install python3-pip
 pip3 install atcom
