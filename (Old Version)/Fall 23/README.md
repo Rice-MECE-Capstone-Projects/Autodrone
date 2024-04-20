@@ -1,12 +1,10 @@
 # MECE Fall 2023 Capstone project - Autodrone | Rice University
 
-
-<img src="https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/RPi_YOLOv8.png" width="800" height="400" />
-
+<img src="./Photos/RPi_YOLOv8.png" width="1000" height="500" />
 -----------------------------------------------------------------------------------------------
 ## :clipboard: Overall System Design
 
-<img src="https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/Overall_System_Design.png" width="800" height="450" />
+<img src="./Photos/Overall_System_Design.png" width="1000" height="500" />
 
 -----------------------------------------------------------------------------------------------
 
