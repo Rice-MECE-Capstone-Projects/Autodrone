@@ -3,26 +3,31 @@
 
 ## :clipboard: Overall System Design
 ### Test Environment
-
+- Linux VM 
+  - Ubuntu 20.04.6 LTS  
+  - Uses Quectel CM with QMI WWAN Driver
+  - Power: USB-C (Modem) to AC Adapter
+  - Data: USB-A (Modem) to USB-C (Nano)
 ### Autodrone
 - Jetson Nano
   - Uses Quectel CM with GobiNet Driver
   - Power: USB-C (Modem) to USB-A (Nano)
-  - Data: USB-A (Modem) to USB-C (Nano)
-- Linux VM
-  - Uses Quectel CM with QMI WWAN Driver
-  - Power: USB-C (Modem) to AC Adapter
   - Data: USB-A (Modem) to USB-C (Nano)
 
 
 -----------------------------------------------------------------------------------------------
 
 ## :computer:Hardware (Embedded systems)
-### Download Software/Drivers (https://docs.sixfab.com/docs/sixfab-5g-modem-kit-documentation)
+### Download Software/Drivers (see folder) 
+(https://docs.sixfab.com/docs/sixfab-5g-modem-kit-documentation)
 - Quectel CM
 - QMI 
 - Gobi
 - USB to Serial
+- UICC
+
+https://docs.sixfab.com/docs/sixfab-5g-modem-kit-documentation
+https://open-cells.com/index.php/uiccsim-programing/
 
 #### Install ATCOM
 
@@ -42,9 +47,7 @@ To launch minicom when UE is connected:
 Sudo minicom -D /dev/ttyUSB2
 ```
 #### Program SIM
-
-Download UICC from https://open-cells.com/index.php/uiccsim-programing/
-Install 
+Install UICC
 ```
 make
 ```
@@ -82,7 +85,39 @@ Sudo minicom -D /dev/ttyUSB2
 ```
 ### Configure UE for OpenAir
 ```
-AT+CGDCONT=1,"IP","oai"
+AT+CGDCONT=1,"IP","oai","0.0.0.0",0,0,0,0
 AT+QCFG="usbnet",0
 
+```
+### Connect UE and Establish Data Session
+- Turn off RF on the UE
+```
+AT+CFUN=4
+```
+- Provide PDP Context and set to activate
+```
+AT+CGDCONT=1,"IP","oai","0.0.0.0",0,0,0,0
+AT+CGACT=1,1
+```
+- Navigate to directory where QCM is compiled and run
+```
+sudo ./quectel-CM -s oai -4
+```
+- Turn on 5G network
+- Turn on RF on UE
+```
+AT+CFUN=1
+```
+- Verify on QCM that the interface received an IP address
+- Can also verify through the command line and test with ping
+```
+ifconfig
+ping -I wwan0 8.8.8.8
+```
+- Verify with AT Commands that network information matches expected values based on 5G network implmenetation
+```
+AT+QNWINFO
+AT+CREG?
+AT+C5GREG?
+AT+QSPN
 ```
