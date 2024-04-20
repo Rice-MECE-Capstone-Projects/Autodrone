@@ -1,3 +1,12 @@
+- **Focus 1:** [Object detection](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/edit/main/ObjectDetection/ObjectDetection.md)
+- **Focus 2:** 3d reconstruction
+- **Focus 3:** Single-object tracking
+- **Focus 4:** Multi-object tracking
+
+
+
+
+
 # 3D reconstruction
 **The code and document is based on original [3D Gaussian Splatting](https://github.com/graphdeco-inria/gaussian-splatting)**, and installation and usage are similar. Please see their repo for more details. Below is a simplified and modified version based on their original readme file, which should work for most cases. We thank 3DGS team for their excellent work!
 
