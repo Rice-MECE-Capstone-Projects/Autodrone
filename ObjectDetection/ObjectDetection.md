@@ -6,7 +6,7 @@ The [VisDrone Dataset](https://github.com/VisDrone/VisDrone-Dataset) is a large-
 
 VisDrone is composed of 288 video clips with 261,908 frames and 10,209 static images, captured by various drone-mounted cameras. The dataset covers a wide range of aspects, including location (14 different cities across China), environment (urban and rural), objects (pedestrians, vehicles, bicycles, etc.), and density (sparse and crowded scenes). The dataset was collected using various drone platforms under different scenarios and weather and lighting conditions. These frames are manually annotated with over 2.6 million bounding boxes of targets such as pedestrians, cars, bicycles, and tricycles. Attributes like scene visibility, object class, and occlusion are also provided for better data utilization.
 
-![visdrone](/ObjectDetection/images/dataset.png)
+![visdrone](images/dataset.png)
 
 ### The VisDrone dataset is organized into five main subsets, each focusing on a specific task:
 
@@ -33,5 +33,13 @@ model = YOLO('yolov8n.pt')  # load a pretrained model (recommended for training)
 # Train the model
 results = model.train(data='VisDrone.yaml', epochs=100, imgsz=640)
 ```
+
+
+- **Focus 1:** [Object detection](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/edit/main/ObjectDetection/ObjectDetection.md)
+- **Focus 2:** 3d reconstruction
+- **Focus 3:** Single-object tracking
+- **Focus 4:** Multi-object tracking
+
+
 
 
