@@ -1,0 +1,10 @@
+# ninja log v5
+5	9704	1690582973783485000	/home/by12/Multi-elevation-NeRF/Wriva/Gaussian_splatting/gaussian-splatting/submodules/simple-knn/build/temp.linux-x86_64-cpython-37/simple_knn.o	8d8b0fb0a8ab8344
+5	24190	1690582988243296000	/home/by12/Multi-elevation-NeRF/Wriva/Gaussian_splatting/gaussian-splatting/submodules/simple-knn/build/temp.linux-x86_64-cpython-37/ext.o	5546ace841f7ad78
+6	52874	1690583016950629000	/home/by12/Multi-elevation-NeRF/Wriva/Gaussian_splatting/gaussian-splatting/submodules/simple-knn/build/temp.linux-x86_64-cpython-37/spatial.o	fadec13c40a3571c
+8	12802	1700605098598790913	/scratch/hl106/yl_workspace/gaussian_splatting_mask/submodules/simple-knn/build/temp.linux-x86_64-cpython-37/simple_knn.o	a8243a219285d0b
+0	28566	1700605114354790454	/scratch/hl106/yl_workspace/gaussian_splatting_mask/submodules/simple-knn/build/temp.linux-x86_64-cpython-37/ext.o	9939393b8ff4f515
+10	63124	1700605148918787425	/scratch/hl106/yl_workspace/gaussian_splatting_mask/submodules/simple-knn/build/temp.linux-x86_64-cpython-37/spatial.o	729ff1b42de708a1
+1	5038	1713208377022711239	/home/neiljin/Documents/PycharmProjects/594_3dgs_thread_depth/submodules/simple-knn/build/temp.linux-x86_64-cpython-37/simple_knn.o	716951b882b2d371
+0	7327	1713208379306517305	/home/neiljin/Documents/PycharmProjects/594_3dgs_thread_depth/submodules/simple-knn/build/temp.linux-x86_64-cpython-37/ext.o	645799d52b243369
+1	21427	1713208393409365404	/home/neiljin/Documents/PycharmProjects/594_3dgs_thread_depth/submodules/simple-knn/build/temp.linux-x86_64-cpython-37/spatial.o	1d2a7b820bb80dac
