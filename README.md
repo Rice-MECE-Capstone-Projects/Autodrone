@@ -1,4 +1,4 @@
 - **Focus 1:** [Object detection](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/edit/main/ObjectDetection)
-- **Focus 2:** [3d reconstruction](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/edit/main/Reconstruction)
+- **Focus 2:** 3D Reconstruction-[Gaussian Splatting](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/edit/main/Reconstruction/3dgs_depth); [Reconstruct with Lidar](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/edit/main/Reconstruction)
 - **Focus 3:** Wireless
 - **Focus 4:** Hardware
