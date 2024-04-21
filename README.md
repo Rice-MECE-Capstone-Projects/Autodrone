@@ -1,4 +1,4 @@
-- **Focus 1:** [Object detection](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/edit/main/ObjectDetection/ObjectDetection.md)
-- **Focus 2:** 3d reconstruction
+- **Focus 1:** [Object detection](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/edit/main/ObjectDetection)
+- **Focus 2:** [3d reconstruction](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/edit/main/Reconstruction)
 - **Focus 3:** Wireless
 - **Focus 4:** Hardware
