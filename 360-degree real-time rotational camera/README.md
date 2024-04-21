@@ -9,13 +9,13 @@
 ### Connecting a Raspberry Pi to a Stepper Motor
 The following figure shows the connection diagram for the Raspberry Pi to control a stepper motor:
 
-![alt text](figures/raspberry-pi-pico-stepper-motor-circuit-diagram.png)
+![alt text](Figures/raspberry-pi-pico-stepper-motor-circuit-diagram.png)
 
 **Pin31, pin32, pin35, and pin37 of the Raspberry Pi are connected to IN1, IN2, IN3, and IN4 of the driver, respectively.**
 
 The positive and negative terminals of the power supply on the driver are connected to +5V on the Raspberry Pi and to ground, respectively
 
-![alt text](figures/GPIO-Pinout-Diagram-2.png)
+![alt text](Figures/GPIO-Pinout-Diagram-2.png)
 
 ### Running Python Code on a Raspberry Pi
 ```python
@@ -165,7 +165,7 @@ You pressed: d
 It will detect the bottom of your press and wait for your next press.
 
 ### Results Showcase
-![Sample GIF](figures/Motor.gif)
+![Sample GIF](Figures/Motor.gif)
 
 ### System Shown in Autodron
-![Sample GIF](figures/system.gif)
+![Sample GIF](Figures/system.gif)
