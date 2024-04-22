@@ -1,5 +1,9 @@
 # Rice Elec 594 Capstone: Autodrone
-This project outlines developing an autonomous drone system designed for first responders working in hazardous environments. It details advancements in hardware, such as a 360-degree camera, and software, particularly in object detection algorithms like YOLOv9 optimized for real-time performance. Additionally, it includes 3D reconstruction capabilities using Gaussian splatting and LiDAR data integration, enhancing environmental modeling accuracy. The integration of these technologies into ROS2 enhances operational simulations and real-world applications, highlighting the drone's potential to improve safety and efficiency in emergency responses. The system continues to evolve, focusing on refining its capabilities for reliable use in diverse conditions.
+For our autodrone project, we address challenges in hazardous environments, aiding first responders by providing imagery inside buildings and detecting people using autodrone. Current solutions involve line or site sensors, video/thermal feeds, and varying levels of automated detection or human monitoring, targeting private industry, first responders, and governments. Our proposed solution includes drone hardware featuring a 360-degree rotational camera and a 4-DOF robot arm. We integrate object detection using YOLOv9 on Gazebo Simulation, deploy on Jetson Orin Nano with TensorRT acceleration, and enable 3D reconstruction through camera-LiDAR fusion. Communication is facilitated by Quectel 5G Modem with OpenAir 5G SA Network. Our solution’s performance includes successful integration, data collection, 3D point cloud rendering, and object detection validation. The next steps involve obstacle avoidance, advanced algorithms, PCB design, motion control enhancement, and real-world tests with YOLOv9 on Jetson Orin Nano.
+
+![Our Auto-Drone](figures/drone.png)
+
+Please see our report [overleaf page](https://www.overleaf.com/project/66201fa7c91c42e8192cbd94)
 
 # Methods
 - **Focus 1:** [Object detection](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/ObjectDetection/ObjectDetection.md)
