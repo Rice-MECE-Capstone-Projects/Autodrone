@@ -8,12 +8,10 @@ Please see our report [overleaf page](https://www.overleaf.com/project/66201fa7c
 # Methods
 - **Focus 1:** [Object detection](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/ObjectDetection/ObjectDetection.md)
 - **Focus 2:** 3D Reconstruction-[Gaussian Splatting](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Reconstruction/3dgs_depth/README.md); [Reconstruct with Lidar](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/main/Reconstruction)
-<div style="text-align:center;">
-  <figure>
-    <img src="figures/3dgs_recon.pdf">
-    <figcaption style="text-align:center;">3D Gaussian Splatting results on the MipNerf-360, TUM and our collected Ryon lab data.</figcaption>
-  </figure>
-</div>
+<p align="center">
+  <img src="figures/3dgs_ryon.gif" alt="recon">
+</p>
+<p align="center">3D Gaussian Splatting representation of Ryon, visualized with <a href="https://github.com/buaacyw/GaussianEditor">GaussianEditor GUI</a>.</p>
 
 - **Focus 3:** Wireless
 - **Focus 4:** Hardware
