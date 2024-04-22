@@ -16,3 +16,8 @@ Please see our report [overleaf page](https://www.overleaf.com/project/66201fa7c
 
 - **Focus 3:** Wireless
 - **Focus 4:** Hardware
+
+
+This project is licensed under Electrical and Computer Engineering Department at Rice University
+
+<img src="https://riceconnect.rice.edu/image/engineering/ece/SOE-ECE-Rice-logo-stacked.jpg" width="500" height="140" />
