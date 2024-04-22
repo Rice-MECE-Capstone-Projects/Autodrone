@@ -6,6 +6,7 @@ For our autodrone project, we address challenges in hazardous environments, aidi
 Please see our report [overleaf page](https://www.overleaf.com/project/66201fa7c91c42e8192cbd94)
 
 # Methods
+(Please click on the corresponding module to view detailed descriptions)
 - **Focus 1:** [Object detection](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/ObjectDetection/ObjectDetection.md)
 - **Focus 2:** 3D Reconstruction-[Gaussian Splatting](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Reconstruction/3dgs_depth/README.md); [Reconstruct with Lidar](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/main/Reconstruction)
 <p align="center">
