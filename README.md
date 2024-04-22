@@ -11,8 +11,7 @@ Please see our report [overleaf page](https://www.overleaf.com/project/66201fa7c
 <p align="center">
   <img src="figures/3dgs_ryon.gif" alt="recon" width="600" height="335.25">
 </p>
-<p align="center">3D Gaussian Splatting representation of Ryon, visualized with <a href="https://github.com/buaacyw/GaussianEditor">GaussianEditor GUI</a>.</p>
-
+<p align="center">3D Gaussian Splatting representation of Ryon Lab, visualized with <a href="https://github.com/buaacyw/GaussianEditor">GaussianEditor GUI</a>.</p>
 
 - **Focus 3:** Wireless
 - **Focus 4:** Hardware
