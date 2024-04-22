@@ -7,6 +7,6 @@ Please see our report [overleaf page](https://www.overleaf.com/project/66201fa7c
 
 # Methods
 - **Focus 1:** [Object detection](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/ObjectDetection/ObjectDetection.md)
-- **Focus 2:** 3D Reconstruction-[Gaussian Splatting](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/edit/main/Reconstruction/3dgs_depth); [Reconstruct with Lidar](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/edit/main/Reconstruction)
+- **Focus 2:** 3D Reconstruction-[Gaussian Splatting](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/edit/main/Reconstruction/3dgs_depth/README.md); [Reconstruct with Lidar](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/edit/main/Reconstruction)
 - **Focus 3:** Wireless
 - **Focus 4:** Hardware
