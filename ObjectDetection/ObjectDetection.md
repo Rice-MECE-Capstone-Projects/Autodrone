@@ -33,6 +33,73 @@ model = YOLO('yolov8n.pt')  # load a pretrained model (recommended for training)
 # Train the model
 results = model.train(data='VisDrone.yaml', epochs=100, imgsz=640)
 ```
+## 4 Deploy on NVIDIA Jetson Orin Nano
+
+### What is NVIDIA Jetson?
+
+NVIDIA Jetson is a series of embedded computing boards designed to bring accelerated AI (artificial intelligence) computing to edge devices. These compact and powerful devices are built around NVIDIA's GPU architecture and are capable of running complex AI algorithms and deep learning models directly on the device, without needing to rely on cloud computing resources. Jetson boards are often used in robotics, autonomous vehicles, industrial automation, and other applications where AI inference needs to be performed locally with low latency and high efficiency. Additionally, these boards are based on the ARM64 architecture and runs on lower power compared to traditional GPU computing devices.
+
+### What is NVIDIA JetPack?
+
+NVIDIA JetPack SDK powers the Jetson modules and is the most comprehensive solution for building accelerated AI applications, reducing time to market. JetPack includes Jetson Linux with bootloader, Linux kernel, Ubuntu desktop environment, and a complete set of libraries for acceleration of GPU computing, multimedia, graphics, and computer vision.
+
+### Flash JetPack to NVIDIA Jetson
+
+- For official NVIDIA Development Kits, download an image and prepare an SD card with JetPack from [this link](https://developer.nvidia.com/).
+- For Seeed Studio reComputer J4012 device, flash JetPack to the included SSD from [this link](https://developer.nvidia.com/).
+
+**Note:** After flashing, enter `sudo apt update && sudo apt install nvidia-jetpack -y` on the device terminal to install all the remaining JetPack components needed.
+
+### Start with Docker
+
+The fastest way to get started with Ultralytics YOLOv8 on NVIDIA Jetson is to run with pre-built docker image for Jetson.
+
+Execute the below command to pull the Docker containter and run on Jetson. This is based on l4t-pytorch docker image which contains PyTorch and Torchvision in a Python3 environment.
+
+```
+t=ultralytics/ultralytics:latest-jetson && sudo docker pull $t && sudo docker run -it --ipc=host --runtime=nvidia $
+```
+### Start without Docker
+#### Install Ultralytics Package
+Here we will install ultralyics package on the Jetson with optional dependencies so that we can export the PyTorch models to other different formats. We will mainly focus on NVIDIA TensorRT exports because TensoRT will make sure we can get the maximum performance out of the Jetson devices.
+
+- **1:** Update packages list, install pip and upgrade to latest
+
+```
+sudo apt update
+sudo apt install python3-pip -y
+pip install -U pip
+```
+
+- **2:** Install ultralytics pip package with optional dependencies
+```
+pip install ultralytics[export]
+```
+- **3:** Reboot the device
+```
+sudo reboot
+```
+
+#### Install PyTorch and Torchvision
+The above ultralytics installation will install Torch and Torchvision. However, these 2 packages installed via pip are not compatible to run on Jetson platform which is based on ARM64 architecture. Therefore, we need to manually install pre-built PyTorch pip wheel and compile/ install Torchvision from source.
+
+
+
+
+
+- **1:** Uninstall currently installed PyTorch and Torchvision
+```
+
+pip uninstall torch torchvision
+
+```
+
+- **2:** Install PyTorch 2.2.0 according to JP6.0
+```
+bashCopy codesudo apt-get install -y libopenblas-base libopenmpi-dev
+wget https://developer.download.nvidia.com/compute/redist/jp/v512/pytorch/torch-2.1.0a0+41361538.nv23.06-cp38-cp38-linux_aarch64.whl -O torch-2.1.0a0+41361538.nv23.06-cp38-cp38-linux_aarch64.whl
+pip install torch-2.1.0a0+41361538.nv23.06-cp38-cp38-linux_aarch64.whl
+```
 
 
 - **Focus 1:** [Object detection](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/edit/main/ObjectDetection/ObjectDetection.md)
