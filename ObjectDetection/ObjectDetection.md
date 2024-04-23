@@ -103,7 +103,7 @@ pip install torch-2.1.0a0+41361538.nv23.06-cp38-cp38-linux_aarch64.whl
 
 
 - **Focus 1:** [Object detection](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/edit/main/ObjectDetection/ObjectDetection.md)
-- **Focus 2:** 3d reconstruction
+- **Focus 2:** [3d reconstruction](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Reconstruction/3dgs_depth/README.md)
 - **Focus 3:** Single-object tracking
 - **Focus 4:** Multi-object tracking
 
