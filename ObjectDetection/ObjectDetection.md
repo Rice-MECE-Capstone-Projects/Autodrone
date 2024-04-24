@@ -37,6 +37,7 @@ results = model.train(data='VisDrone.yaml', epochs=100, imgsz=640)
 ## 2 Train and Evaluate Algorithms on VisDrone dataset
 
 ### YOLOv9
+Navigate to yolov9_Visdrone directory.
 
 #### Training
 Download the VisDrone dataset and put into the yolov9_Visdrone directory.
@@ -58,6 +59,7 @@ Replace 'exp19' with your experiment directory name.
 Use Ultralytics YOLO packages and methods.
 
 ### RetinaNet
+Navigate to retinanet directory.
 
 ```shell
 conda create -n retinanet python=3.7 -y
