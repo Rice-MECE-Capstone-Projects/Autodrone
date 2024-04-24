@@ -138,8 +138,10 @@ In the following, we will assume you have created such a directory and introduce
 python train_visdrone.py --config-file configs/visdrone/retinanet_train.yaml --num-gpu 8 OUTPUT_DIR work_dirs/visdrone_retinanet
 ```
 #### Testing
+```shell
 % test VisDrone RetinaNet
 python infer_coco.py --config-file configs/visdrone/retinanet_test.yaml --num-gpu 8 --eval-only MODEL.WEIGHTS  work_dirs/visdrone_retinanet/model_final.pth OUTPUT_DIR work_dirs/model_test
+```
 
 #### Evaluation
 After running an inference command, you will get a result file named `visdrone_infer.json` in your resulting directory (e.g., `work_dirs/model_test` in the above commands). Then you can evaluate your result by running `bash eval_visdrone.sh work_dirs/model_test/visdrone_infer.json`
