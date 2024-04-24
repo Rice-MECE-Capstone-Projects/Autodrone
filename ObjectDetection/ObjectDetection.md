@@ -33,7 +33,29 @@ model = YOLO('yolov8n.pt')  # load a pretrained model (recommended for training)
 # Train the model
 results = model.train(data='VisDrone.yaml', epochs=100, imgsz=640)
 ```
-## 4 Deploy on NVIDIA Jetson Orin Nano
+
+## 2 Train and Evaluate Algorithms on VisDrone dataset
+
+### YOLOv9
+
+#### Training
+Download the VisDrone dataset and put into the yolov9_Visdrone directory.
+```shell
+conda create -n yolov9
+conda activate yolov9
+pip install -r requirements.txt
+python train_dual.py --batch 16 --epochs 100 --img 640 --device 0 --min-items 0 --close-mosaic 15 --data Visdrone_data/data.yaml --weights ../weights/yolov9-c.pt --cfg models/detect/yolov9-c.yaml --hyp hyp.scratch-high.yaml
+```
+The training results will be in a './runs/train' directory.
+
+#### Evaluation
+```shell
+python val_dual.py --data Visdrone_data/data.yaml --img 640 --batch 64 --conf 0.001 --iou 0.7 --device 0 --weights './runs/train/exp19/weights/best.pt' --save-json --name yolov9_c_640_val
+```
+Replace 'exp19' with your experiment directory name.
+
+
+## 3 Deploy on NVIDIA Jetson Orin Nano
 
 ### What is NVIDIA Jetson?
 
@@ -100,12 +122,6 @@ bashCopy codesudo apt-get install -y libopenblas-base libopenmpi-dev
 wget https://developer.download.nvidia.com/compute/redist/jp/v512/pytorch/torch-2.1.0a0+41361538.nv23.06-cp38-cp38-linux_aarch64.whl -O torch-2.1.0a0+41361538.nv23.06-cp38-cp38-linux_aarch64.whl
 pip install torch-2.1.0a0+41361538.nv23.06-cp38-cp38-linux_aarch64.whl
 ```
-
-
-- **Focus 1:** [Object detection](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/edit/main/ObjectDetection/ObjectDetection.md)
-- **Focus 2:** [3d reconstruction](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Reconstruction/3dgs_depth/README.md)
-- **Focus 3:** Single-object tracking
-- **Focus 4:** Multi-object tracking
 
 
 
