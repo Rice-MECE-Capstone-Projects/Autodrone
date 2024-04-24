@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find hls_lfcd_lds_driver)/rviz/trackqr.rviz" />
+  <node pkg="camera_test" type="camera_pub.py" name="camera_pub" output="screen" args="-d $(find camera_test)/src/camera_pub.py"/>
+  <node pkg="camera_test" type="camera_sub_1.py" name="camera_sub_1" output="screen" args="-d $(find camera_test)/src/camera_sub_1.py"/>
+  <node pkg="camera_test" type="camera_sub_2.py" name="camera_sub_2" output="screen" args="-d $(find camera_test)/src/camera_sub_2.py"/>
+</launch>

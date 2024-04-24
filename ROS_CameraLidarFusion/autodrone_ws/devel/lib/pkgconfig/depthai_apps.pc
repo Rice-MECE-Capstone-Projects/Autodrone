@@ -1,0 +1,8 @@
+prefix=/home/zeningli/Documents/autodrone_ws/devel
+
+Name: depthai_apps
+Description: Description of depthai_apps
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

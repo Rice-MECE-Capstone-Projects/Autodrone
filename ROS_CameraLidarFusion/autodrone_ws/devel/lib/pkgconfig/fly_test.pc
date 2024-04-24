@@ -1,0 +1,8 @@
+prefix=/home/zeningli/Documents/autodrone_ws/devel
+
+Name: fly_test
+Description: Description of fly_test
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
