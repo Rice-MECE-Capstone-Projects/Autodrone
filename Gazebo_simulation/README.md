@@ -37,7 +37,7 @@ sudo apt install ros-dev-tools
 source /opt/ros/humble/setup.bash && echo "source /opt/ros/humble/setup.bash" >> .bashrc
 pip install --user -U empy pyros-genmsg setuptools
 ```
-### Install the binary Gazebo Garden/ROS 2 Humble packages:
+### Install the binary Gazebo Garden/ROS 2 Humble packages
 Folow these [instruction](https://gazebosim.org/docs/garden/install_ubuntu#binary-installation-on-ubuntu) to install gz-garden from [packages.osrfoundation.org](https://packages.osrfoundation.org/gazebo/ubuntu/) repository.
 Install ros_gz from the non official binary packages from apt:
 ```sh
@@ -103,7 +103,9 @@ export GZ_SIM_RESOURCE_PATH=~/.gz/models
 - Copy default.sdf from worlds folder in the main repo to ~/PX4-Autopilot/Tools/simulation/gz/worlds/
 
 ## Run
-### Fly using Keyboard
+### Manual flight (through QGroundControl)
+With QGroundControl and the simulation running, perform a takeoff through QGroundControl (click "takeoff" and accept).
+Fly drone either with virtual joystick or connected transmitter.
 You need several terminals.
   
 - Start QGroundControl
@@ -123,6 +125,6 @@ ros2 run ros_gz_image image_bridge /camera
 
 Terminal #4:
 source ~/px4-venv/bin/activate
-cd ~/PX4-ROS2-Gazebo-YOLOv8
+cd ~/Gazebo_simulation
 python uav_camera_det.py
 ```
