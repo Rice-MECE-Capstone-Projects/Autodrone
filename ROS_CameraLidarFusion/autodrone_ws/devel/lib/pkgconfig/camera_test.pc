@@ -1,8 +1,0 @@
-prefix=/home/zeningli/Documents/autodrone_ws/devel
-
-Name: camera_test
-Description: Description of camera_test
-Version: 0.0.0
-Cflags: -I/home/zeningli/Documents/autodrone_ws/devel/include
-Libs: -L${prefix}/lib 
-Requires: 

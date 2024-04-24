@@ -1,8 +1,0 @@
-prefix=/home/zeningli/Documents/autodrone_ws/install
-
-Name: pyzbar
-Description: Description of pyzbar
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

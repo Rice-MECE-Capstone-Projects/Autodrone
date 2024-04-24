@@ -1,2 +1,0 @@
-beginner_tutorials:camera_test:depthai_apps:fcu_connection:fly_test:fusion_sensor:hls_lfcd_lds_driver:lidar_3d_test:pyzbar:rplidar_ros
--DCATKIN_DEVEL_PREFIX=/home/zeningli/Documents/autodrone_ws/devel -DCMAKE_INSTALL_PREFIX=/home/zeningli/Documents/autodrone_ws/install -G Unix Makefiles

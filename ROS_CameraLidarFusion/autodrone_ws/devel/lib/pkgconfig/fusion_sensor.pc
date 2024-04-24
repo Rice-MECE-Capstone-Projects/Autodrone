@@ -1,8 +1,0 @@
-prefix=/home/zeningli/Documents/autodrone_ws/devel
-
-Name: fusion_sensor
-Description: Description of fusion_sensor
-Version: 0.0.0
-Cflags: -I/home/zeningli/Documents/autodrone_ws/devel/include
-Libs: -L${prefix}/lib 
-Requires: 

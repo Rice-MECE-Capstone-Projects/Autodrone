@@ -1,8 +1,0 @@
-prefix=/home/zeningli/Documents/autodrone_ws/install
-
-Name: camera_test
-Description: Description of camera_test
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: 

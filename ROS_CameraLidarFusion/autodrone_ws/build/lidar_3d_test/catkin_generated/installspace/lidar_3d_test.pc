@@ -1,8 +1,0 @@
-prefix=/home/zeningli/Documents/autodrone_ws/install
-
-Name: lidar_3d_test
-Description: Description of lidar_3d_test
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

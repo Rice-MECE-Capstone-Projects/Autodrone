@@ -1,8 +1,0 @@
-prefix=/home/zeningli/Documents/autodrone_ws/install
-
-Name: fcu_connection
-Description: Description of fcu_connection
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

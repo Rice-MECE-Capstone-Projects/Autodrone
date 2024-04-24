@@ -1,8 +1,0 @@
-prefix=/home/zeningli/Documents/autodrone_ws/install
-
-Name: hls_lfcd_lds_driver
-Description: Description of hls_lfcd_lds_driver
-Version: 1.1.2
-Cflags: -I${prefix}/include -I/home/zeningli/miniforge3/envs/ros_env/include
-Libs: -L${prefix}/lib 
-Requires: roscpp std_msgs sensor_msgs

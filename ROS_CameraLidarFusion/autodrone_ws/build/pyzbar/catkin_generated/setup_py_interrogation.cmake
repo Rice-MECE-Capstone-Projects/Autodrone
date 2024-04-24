@@ -1,7 +1,0 @@
-set(pyzbar_SETUP_PY_SETUP_MODULE "distutils.core")
-set(pyzbar_SETUP_PY_VERSION "0.0.0")
-set(pyzbar_SETUP_PY_SCRIPTS "")
-set(pyzbar_SETUP_PY_PACKAGES "pyzbar")
-set(pyzbar_SETUP_PY_PACKAGE_DIRS "src/pyzbar")
-set(pyzbar_SETUP_PY_MODULES "")
-set(pyzbar_SETUP_PY_MODULE_DIRS "")
