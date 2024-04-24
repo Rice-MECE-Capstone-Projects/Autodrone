@@ -54,6 +54,94 @@ python val_dual.py --data Visdrone_data/data.yaml --img 640 --batch 64 --conf 0.
 ```
 Replace 'exp19' with your experiment directory name.
 
+### YOLOv8
+Use Ultralytics YOLO packages and methods.
+
+### RetinaNet
+
+```shell
+conda create -n retinanet python=3.7 -y
+source activate retinanet
+pip install torch==1.8.1+cu101 torchvision==0.9.1+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+python -m pip install detectron2==0.4 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.7/index.html
+pip install spconv-cu102==2.1.25
+
+# OPTIONAL: Install the python evaluation tool for VisDrone
+# Reference: https://github.com/tjiiv-cprg/visdrone-det-toolkit-python
+cd visdrone_eval
+pip install -e .
+```
+
+#### VisDrone setting:
+
+- Download the VisDrone dataset from its [official website](http://aiskyeye.com/). 
+- Unzip and place the downloaded dataset as follows:
+
+```
+RetinaNet
+|-- data
+    |-- visdrone
+        |-- VisDrone2019-DET-train
+        |   |-- images  
+        |   |   |-- ...jpg  # 6471 .jpg files
+        |   |-- annotations      
+        |       |-- ...txt  # 6471 .txt files
+        |-- VisDrone2019-DET-val
+            |-- images  
+            |   |-- ...jpg  # 548 .jpg files
+            |-- annotations      
+                |-- ...txt  # 548 .txt files
+```
+
+- Pre-process the dataset by running: `python visdrone/data_prepare.py --visdrone-root data/visdrone`.
+- The resulting file structure will be as follows: 
+
+```
+RetinaNet
+|-- data
+    |-- visdrone
+        |-- VisDrone2019-DET-train
+        |   |-- images  
+        |   |   |-- ...jpg  # 6471 .jpg files
+        |   |-- annotations      
+        |       |-- ...txt  # 6471 .txt files
+        |-- VisDrone2019-DET-val
+        |   |-- images  
+        |   |   |-- ...jpg  # 548 .jpg files
+        |   |-- annotations      
+        |       |-- ...txt  # 548 .txt files
+        |-- coco_format
+            |-- train_images
+            |   |-- ...jpg  # 25884 .jpg files
+            |-- val_images  
+            |   |-- ...jpg  # 548 .jpg files
+            |-- annotations
+                |-- train_label.json
+                |-- val_label.json
+```
+
+Before training, we recommend you to create a `work_dirs` directory to store all training results under `RetinaNet` as follows:
+
+```
+RetinaNet
+|-- work_dirs
+|-- ...  # other stuffs
+```
+
+In the following, we will assume you have created such a directory and introduce the training, testing, and evaluating commands. 
+
+#### Training
+```shell
+% train VisDrone RetinaNet
+python train_visdrone.py --config-file configs/visdrone/retinanet_train.yaml --num-gpu 8 OUTPUT_DIR work_dirs/visdrone_retinanet
+```
+#### Testing
+% test VisDrone RetinaNet
+python infer_coco.py --config-file configs/visdrone/retinanet_test.yaml --num-gpu 8 --eval-only MODEL.WEIGHTS  work_dirs/visdrone_retinanet/model_final.pth OUTPUT_DIR work_dirs/model_test
+
+#### Evaluation
+After running an inference command, you will get a result file named `visdrone_infer.json` in your resulting directory (e.g., `work_dirs/model_test` in the above commands). Then you can evaluate your result by running `bash eval_visdrone.sh work_dirs/model_test/visdrone_infer.json`
+
 
 ## 3 Deploy on NVIDIA Jetson Orin Nano
 
