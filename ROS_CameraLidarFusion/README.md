@@ -11,6 +11,9 @@ This project requires a web camera, RPLIDAR A1, and Pixhawk Hex Cube Black.
 <img src="https://docs.px4.io/main/assets/cube_black_hero.BuuY9D1m.png"  />
 
 
+### Workflow
+![alt text](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/figures/flowchart.png)
+
 
 ### ROS Neotic installation instruction from offical website
 The link can be found here: 
@@ -79,6 +82,9 @@ roslaunch fusion_sensor fusion.launch
 ```
 roslaunch lidar_3d_test fusion.launch lidar_sphere.launch
 ```
+![alt text](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/figures/reconstruction.gif)
+![alt text](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/figures/reconstruction_show.gif)
+
 
 ### Rosbag Data Capture
 rosbag is a file format in ROS used for recording and playing back messages. These files are essentially archives that store data published over ROS topics, including sensor data, robot status information, or environmental data. rosbag allows developers to capture data streams during operation and replay them later for testing or analysis, facilitating easier debugging and system improvement without requiring real-time access to a running robot.
@@ -87,14 +93,17 @@ rosbag is a file format in ROS used for recording and playing back messages. The
 roslaunch fly_test fusion.launch rosbag_collect.launch
 ```
 After the publishing node launched, run folowwing command to capture both video and lidar points.
-'''
+```
 rosrun fly_test video_collect.py
-'''
+```
 Then, run the following command to save "ROS format" video to MP4 file. 
 ```
 rosrun fly_test rosbag_record.py
 ```
-
+Use this command to replay the recorded rosbag:
+```
+rosbag play -l FILENAME.bag
+```
 ### Video Stream
 Grab your local IP adress:
 ```
