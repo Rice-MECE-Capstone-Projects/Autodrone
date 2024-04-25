@@ -17,14 +17,12 @@ For our autodrone project, we address challenges in hazardous environments, aidi
 </p>
 <p align="center">3D Gaussian Splatting representation of Ryon Lab, visualized with <a href="https://github.com/buaacyw/GaussianEditor">GaussianEditor GUI</a>.</p>
 
-- **Focus 3:** Wireless
-- **Focus 4:** Hardware
 
 ## Report
 Autodrone team final report from ELEC 594 Capstone Project in Spring 2024 at Rice University：     
 [ELEC594 Autodrone_project_final_report](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Report/ELEC594_Autodrone_project_final_report.pdf)
 
 
-This project is licensed under Electrical and Computer Engineering Department at Rice University
+This project is licensed under the Electrical and Computer Engineering Department at Rice University
 
 <img src="https://riceconnect.rice.edu/image/engineering/ece/SOE-ECE-Rice-logo-stacked.jpg" width="500" height="140" />
