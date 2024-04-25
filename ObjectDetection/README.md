@@ -57,6 +57,17 @@ Replace 'exp19' with your experiment directory name.
 
 ### YOLOv8
 Use Ultralytics YOLO packages and methods.
+To train a YOLOv8n model on the VisDrone dataset for 100 epochs with an image size of 640, you can use the following code snippets. For a comprehensive list of available arguments, refer to the model [Training page](https://docs.ultralytics.com/modes/train/).
+
+```python
+from ultralytics import YOLO
+
+# Load a model
+model = YOLO('yolov8n.pt')  # load a pretrained model (recommended for training)
+
+# Train the model
+results = model.train(data='VisDrone.yaml', epochs=100, imgsz=640)
+```
 
 ### RetinaNet
 Navigate to retinanet directory.
@@ -80,7 +91,7 @@ pip install -e .
 - Unzip and place the downloaded dataset as follows:
 
 ```
-RetinaNet
+RetinaNet_Visdrone
 |-- data
     |-- visdrone
         |-- VisDrone2019-DET-train
@@ -99,7 +110,7 @@ RetinaNet
 - The resulting file structure will be as follows: 
 
 ```
-RetinaNet
+RetinaNet_Visdrone
 |-- data
     |-- visdrone
         |-- VisDrone2019-DET-train
@@ -122,10 +133,10 @@ RetinaNet
                 |-- val_label.json
 ```
 
-Before training, we recommend you to create a `work_dirs` directory to store all training results under `RetinaNet` as follows:
+Before training, we recommend you to create a `work_dirs` directory to store all training results under `RetinaNet_Visdrone` as follows:
 
 ```
-RetinaNet
+RetinaNet_Visdrone
 |-- work_dirs
 |-- ...  # other stuffs
 ```
