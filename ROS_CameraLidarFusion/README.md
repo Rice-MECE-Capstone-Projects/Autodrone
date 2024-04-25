@@ -4,6 +4,7 @@ This project requires a web camera, RPLIDAR A1, and Pixhawk Hex Cube Black.
 **RPLIDAR A1**
 <img src="https://www.slamtec.ai/wp-content/uploads/2023/11/rplidar-a1-summery-4.jpg"  />
 
+
 **Pixhawk Hex Cube Black**
 <img src="https://docs.px4.io/main/assets/cube_black_hero.BuuY9D1m.png"  />
 
