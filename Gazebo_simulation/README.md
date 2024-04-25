@@ -1,7 +1,7 @@
 # PX4-ROS2-Gazebo-YOLOv9
 Aerial Object Detection using a Drone with PX4 Autopilot and ROS 2. PX4 SITL and Gazebo Garden used for Simulation. YOLOv9 used for Object Detection.
 <p align="center">
-  <img src="assets/gazebo_simulation.png" alt="recon" width="600" height="335.25">
+  <img src="assets/gazebo_simulation.png">
 </p>
 
 ## Installation
