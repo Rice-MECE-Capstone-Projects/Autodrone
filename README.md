@@ -6,7 +6,7 @@ For our autodrone project, we address challenges in hazardous environments, aidi
 
 # Methods
 (Please click on the corresponding module to view detailed descriptions)
-- **Focus 1:** Object Detection and Application-[Object detection](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/ObjectDetection/ObjectDetection.md); [Gazebo simulation](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/main/Gazebo_simulation)
+- **Focus 1:** Object Detection and Application-[Object detection](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/main/ObjectDetection); [Gazebo simulation](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/main/Gazebo_simulation)
 <p align="center">
   <img src="figures/gazebo_simulation.gif" alt="recon" width="600" height="335.25">
 </p>
