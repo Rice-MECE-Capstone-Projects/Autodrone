@@ -22,7 +22,7 @@ For our autodrone project, we address challenges in hazardous environments, aidi
 
 ## Report
 Autodrone team final report from ELEC 594 Capstone Project in Spring 2024 at Rice University：
-[ELEC594 Autodrone_project_final_report]((https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Report/ELEC594_Autodrone_project_final_report.pdf)
+[ELEC594 Autodrone_project_final_report](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Report/ELEC594_Autodrone_project_final_report.pdf)
 
 
 This project is licensed under Electrical and Computer Engineering Department at Rice University
