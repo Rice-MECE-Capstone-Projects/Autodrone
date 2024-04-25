@@ -88,8 +88,9 @@ After the publishing node launched, run folowwing command to capture both video 
 rosrun fly_test video_collect.py
 '''
 Then, run the following command to save "ROS format" video to MP4 file. 
+```
 rosrun fly_test rosbag_record.py
-
+```
 
 ### Video Stream
 Grab your local IP adress:
