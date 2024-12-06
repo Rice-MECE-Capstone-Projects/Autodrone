@@ -79,8 +79,7 @@ pip3 install --user -r requirements.txt
   
 python3 ./pySim-read.py -p 0
 ```
-Use PySim
-Change
+Use PySim to change following fields:
   1. -a
   2. -I
   3. --acc
@@ -100,6 +99,20 @@ pip install opencv-python
 apt-get install vim
 apt-get install libgl1-mesa-glx
 ```
+### Configure External Server (devkit02)
+```
+apt update
+apt install git
+apt install python3
+apt install pip
+apt install wget
+apt install libgl1-mesa-glx
+git clone https://github.com/PeaceNeil/Depth_Estimator_594.git
+cd Depth_Estimator_594
+pip install -r requirements.txt
+wget https://huggingface.co/depth-anything/Depth-Anything-V2-Small/resolve/main/depth_anything_v2_vits.pth
+```
+Replace DispAnything.py with the version included in Server folder
 -----------------------------------------------------------------------------------------------
 ## 📱 Initial Operations 
 ### Basic ATCOM Commands
