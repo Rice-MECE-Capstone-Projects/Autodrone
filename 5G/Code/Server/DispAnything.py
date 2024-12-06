@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D  # Needed for 3D plotting
 import time
 
-from depth_anything_v2.dpt import DepthAnythingV2
-#from Depth_Estimator_594.depth_anything_v2.dpt import DepthAnythingV2
+#from depth_anything_v2.dpt import DepthAnythingV2
+from Depth_Estimator_594.depth_anything_v2.dpt import DepthAnythingV2
 
 # Device configuration
 DEVICE = 'cuda' if torch.cuda.is_available() else 'mps' if torch.backends.mps.is_available() else 'cpu'
@@ -39,8 +39,8 @@ def load_model(encoder_type='vits'):
     }
     
     model = DepthAnythingV2(**model_configs[encoder_type])
-    model.load_state_dict(torch.load(f'depth_anything_v2_{encoder_type}.pth', map_location='cpu'))
-    #model.load_state_dict(torch.load(f'Depth_Estimator_594/depth_anything_v2_{encoder_type}.pth', map_location='cpu'))
+    #model.load_state_dict(torch.load(f'depth_anything_v2_{encoder_type}.pth', map_location='cpu'))
+    model.load_state_dict(torch.load(f'Depth_Estimator_594/depth_anything_v2_{encoder_type}.pth', map_location='cpu'))
     return model.to(DEVICE).eval()
 
 def normalize_depth(depth):

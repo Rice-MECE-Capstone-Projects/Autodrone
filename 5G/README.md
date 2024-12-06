@@ -112,7 +112,18 @@ cd Depth_Estimator_594
 pip install -r requirements.txt
 wget https://huggingface.co/depth-anything/Depth-Anything-V2-Small/resolve/main/depth_anything_v2_vits.pth
 ```
-Replace DispAnything.py with the version included in Server folder
+Note - Replace DispAnything.py with the version included in Server folder. This fixes paths so that server scripts can import DepthAnythingV2. To run the command below from the Depth_Estimator_594 directory, 
+```
+python DispAnything.py --image_path IMAGE_PATH --encoder MODEL_TYPE
+```
+toggle the lines below from DispAnything.py
+```
+#from depth_anything_v2.dpt import DepthAnythingV2
+from Depth_Estimator_594.depth_anything_v2.dpt import DepthAnythingV2
+
+#model.load_state_dict(torch.load(f'depth_anything_v2_{encoder_type}.pth', map_location='cpu'))
+model.load_state_dict(torch.load(f'Depth_Estimator_594/depth_anything_v2_{encoder_type}.pth', map_location='cpu'))
+```
 -----------------------------------------------------------------------------------------------
 ## 📱 Initial Operations 
 ### Basic ATCOM Commands
