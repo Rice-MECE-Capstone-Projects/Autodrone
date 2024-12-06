@@ -188,3 +188,21 @@ AT+CREG?
 AT+C5GREG?
 AT+QSPN
 ```
+## Sample Usage
+### Start 5G Network
+### Connect Raspberry Pi
+- Navigate to directory where QCM is compiled and run
+```
+sudo ./quectel-CM -s oai -4
+```
+### Start Server script
+- Navigate to directory 
+```
+python3 server_udp.py
+```
+
+### Start Client script
+- Navigate to directory
+``` 
+python3 client_udp_pic.py
+```
