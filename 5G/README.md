@@ -8,9 +8,9 @@
   - Uses Quectel CM with QMI WWAN Driver
   - Power: USB-C (Modem) to AC Adapter
   - Data: USB-A (Modem) to USB-C (Nano)
-### Autodrone
-- Jetson Nano
-  - Uses Quectel CM with GobiNet Driver
+### Raspberry Pi
+- Raspberry Pi v3
+  - Uses Quectel CM with WWAN Driver
   - Power: USB-C (Modem) to USB-A (Nano)
   - Data: USB-A (Modem) to USB-C (Nano)
 
@@ -48,6 +48,7 @@ To launch minicom when UE is connected:
 Sudo minicom -D /dev/ttyUSB2
 ```
 #### Program SIM
+##### Method #1 UICC
 Install UICC
 ```
 make
@@ -61,6 +62,43 @@ To program a SIM card, use a card reader. Below is an example configuration base
 ```
 sudo ./program_uicc --adm 12345678 --imsi 001010000000001 --isdn 00000001 --acc 0001 --key fec86ba6eb707ed08905757b1bb44b8f --opc C42449363BBAD02B66D16BC975D77CC1 -spn "OpenAirInterface" --authenticate![image](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/assets/143918914/3e79efae-3978-4fbd-ae9d-5d88c713858e)
 
+```
+
+##### Method #2 PySim
+Install PySim
+```
+sudo apt-get install --no-install-recommends \
+    pcscd libpcsclite-dev \
+    python3 \
+    python3-setuptools \
+    python3-pycryptodome \
+    python3-pyscard \
+    python3-pip
+    
+pip3 install --user -r requirements.txt
+  
+python3 ./pySim-read.py -p 0
+```
+Use PySim
+Change
+  1. -a
+  2. -I
+  3. --acc
+
+Example Usage
+```
+python3 ./pySim-prog.py -p 0 -a 46790054 -i 001010000000003 -s 8949440000001160017 --acc 0001 -k fec86ba6eb707ed08905757b1bb44b8f -o C42449363BBAD02B66D16BC975D77CC1 -n "OpenAirInterface" --dry-run
+
+python3 ./pySim-prog.py -p 0 -a 46790054 -i 001010000000003 -s 8949440000001160017 --acc 0001 -k fec86ba6eb707ed08905757b1bb44b8f -o C42449363BBAD02B66D16BC975D77CC1 -n "OpenAirInterface"
+```
+### Configure Raspberry Pi for Data Transfer
+```
+apt update
+apt-get install python3
+apt-get install python3-pip
+pip install opencv-python
+apt-get install vim
+apt-get install libgl1-mesa-glx
 ```
 -----------------------------------------------------------------------------------------------
 ## 📱 Initial Operations 
@@ -83,6 +121,10 @@ sudo dmesg | grep tty
 ### Start Minicom to send AT Commands
 ```
 Sudo minicom -D /dev/ttyUSB2
+```
+### Use atcom to send AT Commands
+```
+atcom AT+CFUN=?
 ```
 ### Configure UE for OpenAir
 ```
