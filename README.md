@@ -26,6 +26,7 @@ For the reconstruction and ego-motion localization in 24 Fall semester, we used 
 <p align="center">Predicted Depth as the camera approaches the obstacles</p>
 
 - **Focus 4:** Computation Offload over 5G
+
 Using 5G to transmit images captured by webcam on Raspberry Pi over 5G to server for depth inference and obstacle detection before returning depth data and command to the drone. 
 <p align="center">
   <img src="figures/5G_Depth.png" alt="recon" width="600" height="335.25">
