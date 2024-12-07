@@ -1,4 +1,4 @@
-# Autodrone for Person Re-Identification
+# Autodrone with Perception and Obstacle Avoidance
 ![Our Auto-Drone](figures/drone.png)
 
 ## Background
