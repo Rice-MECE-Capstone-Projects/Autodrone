@@ -34,7 +34,7 @@ Using 5G to transmit images captured by webcam on Raspberry Pi over 5G to server
 <p align="center">Transmitted Images over 5G and Depth Inference with returned depth value.</p>
 
 ## Report
-Autodrone team final report from ELEC 594 Capstone Project in Spring 2024 at Rice University：     
+Autodrone team final report from ELEC 594 Capstone Project in Fall 2024 at Rice University：     
 [ELEC594 Autodrone_project_final_report](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Report/24Fall_ELEC594_Autodrone_project_final_report.pdf)
 
 
