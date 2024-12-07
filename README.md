@@ -12,6 +12,8 @@ For our autodrone project, we address challenges in hazardous environments, aidi
 <p align="center">Gazebo Simulation of Object Detection of Drone using YOLOv9</p>
 
 - **Focus 2:** 3D Reconstruction-[Gaussian Splatting](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Reconstruction/3dgs_depth/README.md); [Reconstruct with Lidar](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/main/Reconstruction)
+
+For the reconstruction and ego-motion localization in 24 Fall semester, we used [COLMAP](https://colmap.github.io) to perform feature detection, matching and sparse reconstruction. Please follow the official document for more details.
 <p align="center">
   <img src="figures/3dgs_ryon.gif" alt="recon" width="600" height="335.25">
 </p>
