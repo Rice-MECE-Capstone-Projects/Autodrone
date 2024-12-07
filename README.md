@@ -25,6 +25,13 @@ For the reconstruction and ego-motion localization in 24 Fall semester, we used 
 </p>
 <p align="center">Predicted Depth as the camera approaches the obstacles</p>
 
+- **Focus 4:** Computation Offload over 5G
+Using 5G to transmit images captured by webcam on Raspberry Pi over 5G to server for depth inference and obstacle detection before returning depth data and command to the drone. 
+<p align="center">
+  <img src="figures/5G_Depth.png" alt="recon" width="600" height="335.25">
+</p>
+<p align="center">Transmitted Images over 5G and Depth Inference with returned depth value.</p>
+
 ## Report
 Autodrone team final report from ELEC 594 Capstone Project in Spring 2024 at Rice University：     
 [ELEC594 Autodrone_project_final_report](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Report/ELEC594_Autodrone_project_final_report.pdf)
