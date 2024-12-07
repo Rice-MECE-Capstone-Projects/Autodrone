@@ -13,7 +13,7 @@ We aim to use AutoDrone to help humans in repetitive tasks. Current SOTA methods
 
 - **Focus 2:** 3D Reconstruction-[Gaussian Splatting](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Reconstruction/3dgs_depth/README.md); [Reconstruct with Lidar](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/main/Reconstruction)
 
-For the reconstruction and ego-motion localization in 24 Fall semester, we used [COLMAP](https://colmap.github.io) to perform feature detection, matching and sparse reconstruction. Please follow the official document for more details.
+For the reconstruction and ego-motion localization in 24 Fall semester, we used [COLMAP](https://colmap.github.io) to perform feature detection, matching and sparse reconstruction. Please follow the official document for more details. We recommend install a GPU version COLMAP GUI following this [instruction](https://colmap.github.io/install.html)
 <p align="center">
   <img src="figures/3dgs_ryon.gif" alt="recon" width="600" height="335.25">
 </p>
