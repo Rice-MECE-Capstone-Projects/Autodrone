@@ -1,5 +1,4 @@
-# Autodrone with Perception and
-Obstacle Avoidance
+# Autodrone with Perception and Obstacle Avoidance
 ![Our Auto-Drone](figures/drone.png)
 
 ## Background
