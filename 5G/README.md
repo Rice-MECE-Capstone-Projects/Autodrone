@@ -2,17 +2,12 @@
 ## 5G
 
 ## :clipboard: Overall System Design
-### Test Environment
-- Linux VM 
-  - Ubuntu 20.04.6 LTS  
-  - Uses Quectel CM with QMI WWAN Driver
-  - Power: USB-C (Modem) to AC Adapter
-  - Data: USB-A (Modem) to USB-C (Nano)
-### Raspberry Pi
+
+### Drone - Raspberry Pi and Sixfab 5G Modem
 - Raspberry Pi v3
-  - Uses Quectel CM with WWAN Driver
-  - Power: USB-C (Modem) to USB-A (Nano)
-  - Data: USB-A (Modem) to USB-C (Nano)
+  - Uses Quectel CM with QMI Driver
+  - Modem Power: USB-C (Modem) to USB-A (Nano)
+  - Data: USB Bridge Connector and 40 pin header
 
 
 -----------------------------------------------------------------------------------------------
@@ -39,7 +34,7 @@ pip3 install atcom
 
 
 #### Install Minicom
-Install Minicom 
+Install Minicom (On Raspberry Pi)
 ```
 Sudo apt install minicom
 ```
@@ -91,6 +86,14 @@ python3 ./pySim-prog.py -p 0 -a 46790054 -i 001010000000003 -s 89494400000011600
 python3 ./pySim-prog.py -p 0 -a 46790054 -i 001010000000003 -s 8949440000001160017 --acc 0001 -k fec86ba6eb707ed08905757b1bb44b8f -o C42449363BBAD02B66D16BC975D77CC1 -n "OpenAirInterface"
 ```
 ### Configure Raspberry Pi for Data Transfer
+Install Quectel Connect Manager
+  1. Unzip V1.6.5
+  2. Navigate to directory
+  3. ``` 
+      sudo make
+      sudo make install
+     ```
+
 ```
 apt update
 apt-get install python3
