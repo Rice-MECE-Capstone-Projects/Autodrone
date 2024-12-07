@@ -5,7 +5,7 @@
 We aim to use AutoDrone to help humans in repetitive tasks. Current SOTA methods use various sensors (video, LiDAR, thermal) and process data locally to generate commands. Our approach integrates a webcam, Raspberry Pi, and 5G modem to enable the drone’s perception. Our system allows for the drone to identify obstacles in its path by transmitting images over 5G to an external server that infers depth of current frame. Our solution’s performance includes improved flight stability, successful image transmission and command return based on depth perception. Future work will focus on perception precision and automating flight controls after obstacle detection.
 
 ## Methods
-- **Focus 1:** Panotic Segmentation -[Panotic Segmentation](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/main/Segmentation)
+- **Focus 1:** Panotic Segmentation -[Panotic Segmentation](https://github.com/IDEA-Research/Grounded-Segment-Anything.git)
 <p align="center">
   <img src="figures/segmentation.gif" alt="recon" width="600" height="335.25">
 </p>
