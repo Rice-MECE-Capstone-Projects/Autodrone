@@ -1,0 +1,1 @@
+-I"/home/by12/testing_cuda_stuff/gaussian-splatting/submodules/diff_gaussian_rasterization_masks/cuda_rasterizer" -I"/home/by12/testing_cuda_stuff/gaussian-splatting/submodules/diff_gaussian_rasterization_masks/third_party/glm" -I"/usr/local/cuda/targets/x86_64-linux/include"

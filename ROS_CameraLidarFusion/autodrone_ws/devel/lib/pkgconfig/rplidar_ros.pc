@@ -1,0 +1,8 @@
+prefix=/home/zeningli/Documents/autodrone_ws/devel
+
+Name: rplidar_ros
+Description: Description of rplidar_ros
+Version: 2.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
