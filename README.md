@@ -19,9 +19,9 @@ For our autodrone project, we address challenges in hazardous environments, aidi
 
 - **Focus 3:** Depth Perception-[Depth_Estimator](https://github.com/PeaceNeil/Depth_Estimator_594/blob/main/README.md);
 <p align="center">
-  <img src="figures/perception.png" alt="recon" width="600" height="335.25">
+  <img src="figures/perception.png" alt="recon" width="600">
 </p>
-<p align="center">3D Gaussian Splatting representation of Ryon Lab, visualized with <a href="https://github.com/buaacyw/GaussianEditor">GaussianEditor GUI</a>.</p>
+<p align="center">Predicted Depth as the camera approaches the obstacles</p>
 
 ## Report
 Autodrone team final report from ELEC 594 Capstone Project in Spring 2024 at Rice University：     
