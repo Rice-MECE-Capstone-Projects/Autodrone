@@ -1,3 +1,6 @@
 [submodule "Depth_Estimator_594"]
 	path = Depth_Estimator_594
 	url = https://github.com/PeaceNeil/Depth_Estimator_594
+[submodule "Segmentation"]
+	path = Segmentation
+	url = https://github.com/IDEA-Research/Grounded-Segment-Anything.git
