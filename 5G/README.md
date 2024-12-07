@@ -89,10 +89,11 @@ python3 ./pySim-prog.py -p 0 -a 46790054 -i 001010000000003 -s 89494400000011600
 Install Quectel Connect Manager
   1. Unzip V1.6.5
   2. Navigate to directory
-  3. ``` sudo make
-         sudo make install
-         ```
-         
+  3. ``` 
+      sudo make
+      sudo make install
+     ```
+
 ```
 apt update
 apt-get install python3
