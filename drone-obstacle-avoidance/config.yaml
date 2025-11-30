@@ -1,0 +1,12 @@
+# Drone Obstacle Avoidance System Configuration
+ALLOWED_L4T_VERSIONS:
+  - 35.3.1
+  - 35.4.1
+  - 35.5.0
+  - 36.4.4
+REQUIRED_DISK_SPACE: 5  # in GB (much lighter!)
+REQUIRED_MEM_SPACE: 4
+PACKAGES:
+  - nvidia-jetpack
+DOCKER: 
+  ENABLE: false  # 不使用 Docker，直接运行
