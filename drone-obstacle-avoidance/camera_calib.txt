@@ -1,0 +1,32 @@
+============================================================
+Camera Calibration Report
+============================================================
+
+Script directory: /home/penguin/capstone/jetson-examples/reComputer/scripts/drone-obstacle-avoidance
+Images folder: calibration_images
+Valid images: 13/16
+Image resolution: 4284x5712
+Chessboard: 6x5 inner corners
+Square size: 30.0mm
+
+Camera Matrix (K):
+[[4.03284605e+03 0.00000000e+00 2.13002236e+03]
+ [0.00000000e+00 4.03268220e+03 2.83996165e+03]
+ [0.00000000e+00 0.00000000e+00 1.00000000e+00]]
+
+fx = 4032.85 pixels
+fy = 4032.68 pixels
+cx = 2130.02 pixels
+cy = 2839.96 pixels
+
+Distortion Coefficients:
+[ 1.76713627e-01 -5.94778090e-01  1.38323798e-04 -1.03329404e-03
+  5.77257974e-01]
+
+k1 = 0.176714
+k2 = -0.594778
+p1 = 0.000138
+p2 = -0.001033
+k3 = 0.577258
+
+Re-projection Error: 0.2325 pixels (Excellent)

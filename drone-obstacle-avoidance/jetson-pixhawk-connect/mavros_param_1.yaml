@@ -1,0 +1,38 @@
+# mavros_params.yaml
+# Notes:
+# - This is a ROS 2 style parameter file (for Humble + MAVROS 2)
+# - Only the most critical connection/ID/frame parameters are configured; others stay default
+# - If you want Jetson to connect via UART directly, change fcu_url to serial:///dev/ttyTHS1:115200
+
+mavros:
+  ros__parameters:
+    # === Connect to flight controller ===
+    # USB (Pixhawk / Cube) is usually /dev/ttyACM0; baud rate depends on firmware, commonly 115200
+    fcu_url: "serial:///dev/ttyACM0:115200"
+    fcu_protocol: "v2.0"          # Common: v2.0
+    # If you want to mirror MAVLink to a ground station at the same time, you can additionally enable (optional):
+    # gcs_url: "udp://@14555"
+
+    # === UAS identification (same as in your previous commands) ===
+    target_system_id: 3
+    target_component_id: 1
+    # You can also explicitly set your own system/component IDs if needed (usually not necessary):
+    # system_id: 1
+    # component_id: 191
+
+    # === Time synchronization (recommended to keep enabled; default is enabled) ===
+    # timesync_mode: "MAVLINK"     # Only change when you need to set it to NONE/ONBOARD
+
+    # === Velocity control frame (for convenient body-frame control) ===
+    # Interpret /mavros/setpoint_velocity/cmd_vel as BODY_NED (body frame: forward/right/down)
+    setpoint_velocity:
+      mav_frame: "BODY_NED"       # Numeric equivalent 8; use "LOCAL_NED" for map frame
+
+    # === Common plugin options (enable/adjust as needed) ===
+    # sys_status:
+    #   enable_diag: true
+    # setpoint_raw:
+    #   thrust_scaling: 1.0
+
+    # === Log output level (set to warn if you want it quieter) ===
+    # rosout_disable_topics: false
